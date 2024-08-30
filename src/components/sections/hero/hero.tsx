@@ -6,8 +6,16 @@ let cardInformation = [
   {
     name: "GymTracker",
     description: "A web app that helps people track their workouts",
-    image: "N/A",
-    technologies: ["React"],
+    image: "",
+    tag: "",
+    technologies: ["React", "NextJS"],
+  },
+  {
+    name: "GymTracker",
+    description: "A web app that helps people track their workouts",
+    image: "",
+    tag: "",
+    technologies: ["React", "NextJS"],
   },
 ];
 
@@ -27,9 +35,11 @@ function Hero() {
         </div>
       </div>
       <div className="bg-blue-900 h-1/2">
-        {cardInformation.map((project) => (
-          <HeroCard data={project} />
-        ))}
+        <div className="flex justify-center gap-4">
+          {cardInformation.map((project) => (
+            <HeroCard data={project} />
+          ))}
+        </div>
       </div>
     </div>
   );
