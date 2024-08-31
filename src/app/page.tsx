@@ -4,10 +4,11 @@ import Contact from "@/components/sections/contact/contact";
 import Hero from "@/components/sections/hero/hero";
 import Navbar from "@/components/navbar/navbar";
 import Projects from "@/components/sections/projects/projects";
+import { motion, useScroll, useMotionValueEvent } from "framer-motion";
 
 export default function Home() {
   return (
-    <main className="">
+    <main className="bg-zinc-900 inset-0 bg-[radial-gradient(#2a2a30_1px,transparent_1px)] [background-size:24px_24px]">
       <Navbar />
       <Hero />
       <About />

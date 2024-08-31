@@ -1,9 +1,11 @@
-import React from 'react'
+import React from "react";
 
 function Projects() {
   return (
-    <div className=''>projects</div>
-  )
+    <div className="h-screen" id="projects">
+      projects
+    </div>
+  );
 }
 
-export default Projects
+export default Projects;

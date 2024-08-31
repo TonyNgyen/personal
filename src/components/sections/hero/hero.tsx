@@ -1,6 +1,8 @@
 import React from "react";
 import styles from "./hero.module.css";
 import HeroCard from "@/components/cards/heroCard/heroCard";
+import Link from "next/link";
+import Image from "next/image";
 
 let cardInformation = [
   {
@@ -21,21 +23,46 @@ let cardInformation = [
 
 function Hero() {
   return (
-    <div className="bg-gray-700 h-[calc(100vh-100px)]">
-      <div className="bg-red-900 h-1/2 flex justify-center items-center">
-        <div className="w-[500px] bg-gray-400">
-          <div className="w-[500px] h-[300px] flex justify-end items-center">
-            Image
-          </div>
+    <div className="h-[calc(100vh-100px)] flex flex-col items-center gap-12 pt-20">
+      <div className="flex items-center gap-7">
+        <div className="flex items-center">
+          <Image
+            src="/dog.jpg"
+            width={200}
+            height={200}
+            alt="Picture of the dog"
+            className="rounded-full"
+          />
         </div>
-        <div className="w-[500px] bg-purple-400">
-          <div className="w-[500px] h-[300px] flex justify-start items-center">
-            Description
+        <div className="w-[540px]">
+          <div className="flex justify-center items-start flex-col gap-4">
+            <div className="text-lg">
+              <h1>Hey! I'm Tony, a Full Stack Developer.</h1>
+              <h1>
+                I transform ideas into seamless, functional web applications. I
+                specialize in both front-end and back-end development, turning
+                complex ideas into elegant solutions that work.
+              </h1>
+            </div>
+            <div className="flex gap-4 text-sm">
+              <Link className="underline underline-offset-2" href="#about">
+                About
+              </Link>
+              <Link className="underline underline-offset-2" href="#projects">
+                Projects
+              </Link>
+              <Link className="underline underline-offset-2" href="#blog">
+                Blog
+              </Link>
+              <Link className="underline underline-offset-2" href="#contact">
+                Contact
+              </Link>
+            </div>
           </div>
         </div>
       </div>
-      <div className="bg-blue-900 h-1/2">
-        <div className="flex justify-center gap-4">
+      <div className="">
+        <div className="flex gap-4">
           {cardInformation.map((project) => (
             <HeroCard data={project} />
           ))}

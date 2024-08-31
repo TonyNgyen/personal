@@ -1,9 +1,11 @@
-import React from 'react'
+import React from "react";
 
 function Blog() {
   return (
-    <div>Blog</div>
-  )
+    <div className="h-screen" id="blog">
+      Blog
+    </div>
+  );
 }
 
-export default Blog
+export default Blog;
