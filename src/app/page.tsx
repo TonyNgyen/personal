@@ -8,7 +8,7 @@ import { motion, useScroll, useMotionValueEvent } from "framer-motion";
 
 export default function Home() {
   return (
-    <main className="bg-zinc-900 inset-0 bg-[radial-gradient(#2a2a30_1px,transparent_1px)] [background-size:24px_24px]">
+    <main className="bg-zinc-900 inset-0">
       <Navbar />
       <Hero />
       <About />
