@@ -15,7 +15,7 @@ function AboutMe() {
             className="data-[state=checked]:bg-green-500 data-[state=unchecked]:bg-zinc-100"
             onCheckedChange={() => setCareer(!career)}
           />
-          {!career ? <h2 className="text-xl">Career</h2> : <h2 className="text-xl text-green-400">Personal</h2>}
+          {!career ? <h2 className="text-xl font-semibold">Career</h2> : <h2 className="text-xl text-green-400 font-semibold">Personal</h2>}
         </div>
       </div>
 
