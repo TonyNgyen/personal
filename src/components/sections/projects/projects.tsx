@@ -12,7 +12,7 @@ function Projects() {
       name: "GymTracker",
       description: "A web app that helps people track their workouts",
       longDescription: "A web app that helps people track their workouts",
-      image: "",
+      image: "/gymtracker.png",
       tag: "",
       technologies: ["React", "NextJS"],
       link: "",
@@ -25,7 +25,7 @@ function Projects() {
       name: "K-Calendar",
       description: "A web app that helps people track their workouts",
       longDescription: "A web app that helps people track their workouts",
-      image: "",
+      image: "/kcalendar.png",
       tag: "",
       technologies: ["React", "NextJS"],
       link: "",
@@ -48,10 +48,10 @@ function Projects() {
       },
     },
     {
-      name: "GymTracker",
+      name: "Demo Blog",
       description: "A web app that helps people track their workouts",
       longDescription: "A web app that helps people track their workouts",
-      image: "",
+      image: "/blog.png",
       tag: "",
       technologies: ["React", "NextJS"],
       link: "",
@@ -80,7 +80,7 @@ function Projects() {
                 <div
                   key={project.name}
                   className={`duration-300 rounded-lg shadow-lg transition-all z-0 ${
-                    isHovered == index ? " opacity-100 " : " opacity-70 "
+                    isHovered == index ? " opacity-100 " : " opacity-65 "
                   }`}
                   onMouseEnter={() => setIsHovered(index)}
                   style={{
@@ -110,7 +110,7 @@ function Projects() {
                 <h1 className="text-2xl">{project.name}</h1>
                 <span
                   onClick={() => setIsMobile(!isMobile)}
-                  className="px-2 py-1 bg-red-400 cursor-pointer"
+                  className="px-2 py-1 bg-red-400 cursor-pointer rounded-lg"
                 >
                   {isMobile ? "Mobile" : "Desktop"}
                 </span>

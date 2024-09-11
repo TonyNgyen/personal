@@ -18,7 +18,9 @@ interface Information {
 function ProjectCard({ data }: { data: Information }) {
   return (
     <div className="bg-zinc-800 rounded-lg border-stone-400 border flex flex-col overflow-hidden">
-      <div className="w-full h-[200px] bg-gray-400">{data.image}</div>
+      <div className="w-full bg-gray-400">
+        <img src={data.image}></img>
+      </div>
       <div className="flex flex-col gap-3 px-3 py-3">
         <div className="">
           <h1 className="mb-2 text-xl">{data.name}</h1>
@@ -26,9 +28,9 @@ function ProjectCard({ data }: { data: Information }) {
         </div>
         <div className="flex justify-between">
           <h1 className="font-semibold">See Live</h1>
-          <h1 className="px-3 rounded-md border-white border bg-zinc-600 font-medium">
+          {/* <h1 className="px-3 rounded-md border-white border bg-zinc-600 font-medium">
             Learn More
-          </h1>
+          </h1> */}
         </div>
         <div className="flex gap-3 border-t-white border border-transparent pt-3">
           {data.technologies.map((technology) => (

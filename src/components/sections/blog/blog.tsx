@@ -5,11 +5,12 @@ function Blog() {
   const blogs = [
     {
       title: "Version 1.0 Release",
-      description: "GymTracker is finally done and released! There might be some bugs, but it is the MVP.",
+      description:
+        "GymTracker is finally done and released! There might be some bugs, but it is the MVP.",
       mainTag: "GymTracker",
       tags: ["Development", "Troubles"],
       img: "",
-      date: "01/01/2024"
+      date: "01/01/2024",
     },
     {
       title: "Future Plans",
@@ -17,7 +18,7 @@ function Blog() {
       mainTag: "K-Calendar",
       tags: ["Development", "Future"],
       img: "",
-      date: "01/01/2024"
+      date: "01/01/2024",
     },
     {
       title: "Title",
@@ -25,7 +26,7 @@ function Blog() {
       mainTag: "GymTracker",
       tags: ["Development", "Troubles"],
       img: "",
-      date: "01/01/2024"
+      date: "01/01/2024",
     },
     {
       title: "Title",
@@ -33,7 +34,7 @@ function Blog() {
       mainTag: "K-Calendar",
       tags: ["Development", "Future"],
       img: "",
-      date: "01/01/2024"
+      date: "01/01/2024",
     },
     {
       title: "Title",
@@ -41,7 +42,7 @@ function Blog() {
       mainTag: "GymTracker",
       tags: ["Development", "Troubles"],
       img: "",
-      date: "01/01/2024"
+      date: "01/01/2024",
     },
     {
       title: "Title",
@@ -49,7 +50,7 @@ function Blog() {
       mainTag: "K-Calendar",
       tags: ["Development", "Future"],
       img: "",
-      date: "01/01/2024"
+      date: "01/01/2024",
     },
   ];
   return (

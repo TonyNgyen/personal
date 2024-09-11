@@ -18,13 +18,11 @@ function HeroCard({ data }: { data: Information }) {
         <h2 className="w-[190px] text-sm">{data.description}</h2>
       </div>
 
-      <div className="w-[300px] h-[200px] bg-gray-400 rounded-lg">
-        {data.image}
+      <div className="w-[300px] bg-gray-400 bg-transparent">
+        <img src={data.image} className="rounded-lg"></img>
       </div>
       <div className="flex justify-between">
-        <h1 className="font-semibold">
-          See Live
-        </h1>
+        <h1 className="font-semibold">See Live</h1>
         <h1 className="px-3 rounded-md border-white border bg-zinc-600 font-medium">
           Learn More
         </h1>
