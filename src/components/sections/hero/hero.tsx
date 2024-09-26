@@ -56,7 +56,7 @@ function Hero() {
                 turn complex concepts into elegant, effective solutions. */}
                 I primarily specialize in React, NextJS, JavaScript, and MongoDB
                 and am open to utilizing the many techhnologies I am experienced
-                in as well as learning new ones!
+                in and learning new ones!
               </h1>
             </div>
           </div>
