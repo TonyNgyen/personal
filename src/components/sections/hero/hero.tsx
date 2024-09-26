@@ -57,6 +57,7 @@ function Hero() {
                 I primarily specialize in React, NextJS, JavaScript, and MongoDB
                 and am open to utilizing the many techhnologies I am experienced
                 in and learning new ones!
+                Testing
               </h1>
             </div>
           </div>
