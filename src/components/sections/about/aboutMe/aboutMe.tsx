@@ -21,7 +21,7 @@ function AboutMe() {
 
       {!career ? (
         <h2>
-          I'm a software engineer with a focus on full-stack development. I
+          I&apos;m a software engineer with a focus on full-stack development. I
           primarily specialize in React, NextJS, JavaScript, and MongoDB but am
           open to utilizing the many techhnologies I am experienced in as well
           as learning new ones.

@@ -59,7 +59,7 @@ function Blog() {
         <h1 className="mx-auto text-3xl font-bold text-zinc-50 mb-10">Blog</h1>
         <div className="flex flex-wrap gap-4 justify-center">
           {blogs.map((blog) => (
-            <BlogCard blog={blog} />
+            <BlogCard blog={blog} key={blog.title} />
           ))}
         </div>
       </div>

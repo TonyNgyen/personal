@@ -76,6 +76,7 @@ function Projects() {
             {projects.map((project, index) => (
               <div
                 className={`bg-zinc-900 rounded-lg shadow-lg transition-all z-0`}
+                key={index}
               >
                 <div
                   key={project.name}
@@ -97,6 +98,7 @@ function Projects() {
           </div>
           {projects.map((project, index) => (
             <div
+              key={index}
               className={`flex-1 rounded-lg p-4 flex flex-col bg-zinc-800
                 ${isHovered == index ? "" : "hidden"} `}
               style={{

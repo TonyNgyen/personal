@@ -34,7 +34,7 @@ function ProjectCard({ data }: { data: Information }) {
         </div>
         <div className="flex gap-3 border-t-white border border-transparent pt-3">
           {data.technologies.map((technology) => (
-            <Chip technology={technology} />
+            <Chip technology={technology} key={technology}/>
           ))}
         </div>
       </div>

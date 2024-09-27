@@ -20,7 +20,7 @@ function CurrentlyLearning() {
       <h1 className="text-2xl font-bold">Currently Learning</h1>
       <div className="flex gap-4 justify-evenly items-center">
         {skills.map((skill) => (
-          <div className="w-[30%] p-4">
+          <div className="w-[30%] p-4" key={skill.name}>
             <img src={skill.svg} alt={skill.name} className="" />
           </div>
         ))}

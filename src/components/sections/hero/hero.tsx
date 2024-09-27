@@ -48,7 +48,7 @@ function Hero() {
           <div className="flex justify-center items-start flex-col gap-4">
             <div className="text-lg">
               <h1 className="font-bold text-2xl">
-                I'm Tony, a Full Stack Developer based in the U.S.
+                I&apos;m Tony, a Full Stack Developer based in the U.S.
               </h1>
               <h1 className="w-[500px]">
                 {/* I transform ideas into seamless, functional web applications.
@@ -79,7 +79,7 @@ function Hero() {
       <div className="">
         <div className="flex gap-4">
           {cardInformation.map((project) => (
-            <HeroCard data={project} />
+            <HeroCard data={project} key={project.name} />
           ))}
         </div>
       </div>
