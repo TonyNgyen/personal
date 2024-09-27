@@ -7,6 +7,44 @@ import styles from "./projects.module.css";
 function Projects() {
   const [isHovered, setIsHovered] = useState<number | undefined>(0);
   const [isMobile, setIsMobile] = useState<boolean | undefined>(false);
+  const skills = {
+    nextjs: {
+      name: "NextJS",
+      svg: "https://cdn.worldvectorlogo.com/logos/next-js.svg",
+    },
+    react: {
+      name: "React",
+      svg: "https://cdn.worldvectorlogo.com/logos/react-2.svg",
+    },
+    javascript: {
+      name: "Javascript",
+      svg: "https://cdn.worldvectorlogo.com/logos/logo-javascript.svg",
+    },
+    html: {
+      name: "HTML",
+      svg: "https://cdn.worldvectorlogo.com/logos/html-1.svg",
+    },
+    css: {
+      name: "CSS",
+      svg: "https://cdn.worldvectorlogo.com/logos/css-3.svg",
+    },
+    tailwind: {
+      name: "Tailwind CSS",
+      svg: "https://cdn.worldvectorlogo.com/logos/tailwind-css-2.svg",
+    },
+    sql: {
+      name: "SQL",
+      svg: "https://www.svgrepo.com/show/331760/sql-database-generic.svg",
+    },
+    mongodb: {
+      name: "MongoDB",
+      svg: "https://cdn.worldvectorlogo.com/logos/mongodb-icon-1.svg",
+    },
+    python: {
+      name: "Python",
+      svg: "https://cdn.worldvectorlogo.com/logos/python-5.svg",
+    },
+  };
   const projects = [
     {
       name: "GymTracker",
@@ -14,7 +52,7 @@ function Projects() {
       longDescription: "A web app that helps people track their workouts",
       image: "/gymtracker.png",
       tag: "",
-      technologies: ["React", "NextJS"],
+      technologies: ["react", "nextjs"],
       link: "",
       colors: {
         dark: ["207", "74", "85"],
@@ -27,7 +65,7 @@ function Projects() {
       longDescription: "A web app that helps people track their workouts",
       image: "/kcalendar.png",
       tag: "",
-      technologies: ["React", "NextJS"],
+      technologies: ["react", "nextjs"],
       link: "",
       colors: {
         dark: ["0", "100", "77"],
@@ -38,9 +76,9 @@ function Projects() {
       name: "Personal Website / Blog",
       description: "A web app that helps people track their workouts",
       longDescription: "A web app that helps people track their workouts",
-      image: "",
+      image: "/personalWebsite.jpg",
       tag: "",
-      technologies: ["React", "NextJS"],
+      technologies: ["react", "nextjs"],
       link: "",
       colors: {
         dark: ["142", "69", "58"],
@@ -53,7 +91,7 @@ function Projects() {
       longDescription: "A web app that helps people track their workouts",
       image: "/blog.png",
       tag: "",
-      technologies: ["React", "NextJS"],
+      technologies: ["react", "nextjs"],
       link: "",
       colors: {
         dark: ["207", "74", "85"],
@@ -145,6 +183,7 @@ function Projects() {
                                 : "",
                           }}
                         />
+                        <div>Testing</div>
                       </div>
                     </div>
                   </div>
@@ -169,7 +208,7 @@ function Projects() {
                       />
                       <h2>{project.longDescription}</h2>
                     </div>
-                    <div className="flex-1 bg-white/10 rounded-lg px-3 py-2">
+                    <div className="flex-1 bg-white/10 rounded-lg px-3 py-2 flex flex-col">
                       <h1 className="text-lg">Technologies</h1>
                       <div
                         className="w-[60px] h-[7px] rounded-full my-1"
@@ -180,6 +219,7 @@ function Projects() {
                               : "",
                         }}
                       />
+                      <div className="flex gap-4 flex-1 items-center">{project.technologies.map((technology) => (<img className="w-[50px] h-[50px]" src={skills[technology as keyof Object].svg}></img>))}</div>
                     </div>
                   </div>
                 </div>
