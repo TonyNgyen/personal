@@ -101,7 +101,7 @@ function Skills() {
         </div>
         <div className="grid grid-cols-3 place-items-center gap-5 min-h-80">
           {skills[select].map((skill) => (
-            <div className="w-7/12">
+            <div className="w-7/12" key={skill.name}>
               <img src={skill.svg} alt={skill.name} className="" />
             </div>
           ))}
