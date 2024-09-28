@@ -1,0 +1,27 @@
+.bigWrapper {
+    width: 100%;
+    overflow: hidden;
+}
+
+.bigWrapper .wrapper {
+    display: flex;
+}
+
+.bigWrapper .wrapper .chips {
+    display: flex;
+    animation: swipe var(--speed) linear infinite;
+}
+
+.bigWrapper:hover .wrapper .chips {
+    animation-play-state: paused;
+}
+
+@keyframes swipe {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-100%)
+    }
+}

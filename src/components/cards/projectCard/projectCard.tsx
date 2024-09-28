@@ -1,5 +1,6 @@
 import Chip from "@/components/chip/chip";
 import React from "react";
+import styles from "./projectCard.module.css";
 
 interface Information {
   name: string;
@@ -15,7 +16,8 @@ interface Information {
   };
 }
 
-function ProjectCard({ data }: { data: Information }) {
+function ProjectCard({ data, skills }: { data: Information; skills: Object }) {
+  console.log(data.technologies)
   return (
     <div className="bg-zinc-800 rounded-lg border-stone-400 border flex flex-col overflow-hidden">
       <div className="w-full bg-gray-400">
@@ -32,10 +34,27 @@ function ProjectCard({ data }: { data: Information }) {
             Learn More
           </h1> */}
         </div>
-        <div className="flex gap-3 border-t-white border border-transparent pt-3">
-          {data.technologies.map((technology) => (
-            <Chip technology={technology} key={technology}/>
-          ))}
+        <div
+          className={`border-t-white border border-transparent pt-3 ${styles.bigWrapper}`}
+        >
+          <div className={`${styles.wrapper}`}>
+            <div className={styles.chips} style={{'--speed': `15000ms`} as React.CSSProperties}>
+              {data.technologies.map((technology) => (
+                <Chip
+                  technology={skills[technology as keyof Object].name}
+                  key={technology}
+                />
+              ))}
+            </div>
+            <div className={styles.chips} style={{'--speed': `15000ms`} as React.CSSProperties}>
+              {data.technologies.map((technology) => (
+                <Chip
+                  technology={skills[technology as keyof Object].name}
+                  key={technology}
+                />
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     </div>

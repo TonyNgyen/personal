@@ -7,7 +7,11 @@ import styles from "./projects.module.css";
 function Projects() {
   const [isHovered, setIsHovered] = useState<number | undefined>(0);
   const [isMobile, setIsMobile] = useState<boolean | undefined>(false);
-  const skills = {
+  type Skill = {
+    name: string;
+    svg: string;
+  };
+  const skills: { [key: string]: Skill } = {
     nextjs: {
       name: "NextJS",
       svg: "https://cdn.worldvectorlogo.com/logos/next-js.svg",
@@ -28,7 +32,7 @@ function Projects() {
       name: "CSS",
       svg: "https://cdn.worldvectorlogo.com/logos/css-3.svg",
     },
-    tailwind: {
+    tailwindcss: {
       name: "Tailwind CSS",
       svg: "https://cdn.worldvectorlogo.com/logos/tailwind-css-2.svg",
     },
@@ -44,6 +48,30 @@ function Projects() {
       name: "Python",
       svg: "https://cdn.worldvectorlogo.com/logos/python-5.svg",
     },
+    bootstrap: {
+      name: "Bootstrap",
+      svg: "https://cdn.worldvectorlogo.com/logos/bootstrap-5.svg",
+    },
+    java: {
+      name: "Java",
+      svg: "https://cdn.worldvectorlogo.com/logos/java-4.svg",
+    },
+    c: {
+      name: "C",
+      svg: "https://cdn.worldvectorlogo.com/logos/c-1.svg",
+    },
+    cpp: {
+      name: "C++",
+      svg: "https://cdn.worldvectorlogo.com/logos/c.svg",
+    },
+    flask: {
+      name: "Flask",
+      svg: "https://cdn.worldvectorlogo.com/logos/flask.svg",
+    },
+    pandas: {
+      name: "Pandas",
+      svg: "https://cdn.worldvectorlogo.com/logos/pandas.svg",
+    },
   };
   const projects = [
     {
@@ -52,7 +80,7 @@ function Projects() {
       longDescription: "A web app that helps people track their workouts",
       image: "/gymtracker.png",
       tag: "",
-      technologies: ["react", "nextjs"],
+      technologies: ["react", "nextjs", "html", "tailwindcss", "mongodb", "css", "javascript"],
       link: "",
       colors: {
         dark: ["207", "74", "85"],
@@ -65,7 +93,7 @@ function Projects() {
       longDescription: "A web app that helps people track their workouts",
       image: "/kcalendar.png",
       tag: "",
-      technologies: ["react", "nextjs"],
+      technologies: ["react", "nextjs", "html", "tailwindcss", "mongodb", "python", "java", "c", "cpp", "pandas", "flask", "bootstrap"],
       link: "",
       colors: {
         dark: ["0", "100", "77"],
@@ -76,9 +104,9 @@ function Projects() {
       name: "Personal Website / Blog",
       description: "A web app that helps people track their workouts",
       longDescription: "A web app that helps people track their workouts",
-      image: "/personalWebsite.jpg",
+      image: "/personalWebsite.png",
       tag: "",
-      technologies: ["react", "nextjs"],
+      technologies: ["react", "nextjs", "html", "tailwindcss", "mongodb"],
       link: "",
       colors: {
         dark: ["142", "69", "58"],
@@ -91,7 +119,7 @@ function Projects() {
       longDescription: "A web app that helps people track their workouts",
       image: "/blog.png",
       tag: "",
-      technologies: ["react", "nextjs"],
+      technologies: ["react", "nextjs", "html", "tailwindcss", "mongodb"],
       link: "",
       colors: {
         dark: ["207", "74", "85"],
@@ -129,7 +157,7 @@ function Projects() {
                         : "",
                   }}
                 >
-                  <ProjectCard data={project} />
+                  <ProjectCard data={project} skills={skills} />
                 </div>
               </div>
             ))}
@@ -219,7 +247,21 @@ function Projects() {
                               : "",
                         }}
                       />
-                      <div className="flex gap-4 flex-1 items-center">{project.technologies.map((technology) => (<img className="w-[50px] h-[50px]" src={skills[technology as keyof Object].svg}></img>))}</div>
+                      <div className="flex gap-4 flex-1 items-center overflow-x-auto">
+                        {project.technologies.map((technology) => (
+                          <img
+                            className="w-[50px] h-[50px]"
+                            src={
+                              skills[technology as keyof Object]?.svg ||
+                              "default.svg"
+                            }
+                            alt={
+                              skills[technology as keyof Object]?.name ||
+                              "Unknown"
+                            }
+                          ></img>
+                        ))}
+                      </div>
                     </div>
                   </div>
                 </div>
