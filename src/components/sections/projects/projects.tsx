@@ -80,7 +80,15 @@ function Projects() {
       longDescription: "A web app that helps people track their workouts",
       image: "/gymtracker.png",
       tag: "",
-      technologies: ["react", "nextjs", "html", "tailwindcss", "mongodb", "css", "javascript"],
+      technologies: [
+        "react",
+        "nextjs",
+        "html",
+        "tailwindcss",
+        "mongodb",
+        "css",
+        "javascript",
+      ],
       link: "",
       colors: {
         dark: ["207", "74", "85"],
@@ -89,11 +97,25 @@ function Projects() {
     },
     {
       name: "K-Calendar",
-      description: "A web app that helps people track their workouts",
-      longDescription: "A web app that helps people track their workouts",
+      description: "This website displays upcoming releases in K-Pop!",
+      longDescription:
+        "This website displays upcoming releases in K-Pop! Additionally, it also serves as an informational hub for K-Pop as users can view past releases from artists.",
       image: "/kcalendar.png",
       tag: "",
-      technologies: ["react", "nextjs", "html", "tailwindcss", "mongodb", "python", "java", "c", "cpp", "pandas", "flask", "bootstrap"],
+      technologies: [
+        "react",
+        "nextjs",
+        "html",
+        "tailwindcss",
+        "mongodb",
+        "python",
+        "java",
+        "c",
+        "cpp",
+        "pandas",
+        "flask",
+        "bootstrap",
+      ],
       link: "",
       colors: {
         dark: ["0", "100", "77"],
@@ -102,8 +124,9 @@ function Projects() {
     },
     {
       name: "Personal Website / Blog",
-      description: "A web app that helps people track their workouts",
-      longDescription: "A web app that helps people track their workouts",
+      description: "My personal website that also doubles as my blog!",
+      longDescription:
+        "My personal website that shows all of my skills and projects! It also serves as my blog where I post about updates to my projects and what I've been up to. There is a dashboard to this website that I use to add skills, projects, and blogs without needing to go directly into the code!",
       image: "/personalWebsite.png",
       tag: "",
       technologies: ["react", "nextjs", "html", "tailwindcss", "mongodb"],
@@ -115,7 +138,7 @@ function Projects() {
     },
     {
       name: "Demo Blog",
-      description: "A web app that helps people track their workouts",
+      description: "A blog website that I built when learning Fullstack",
       longDescription: "A web app that helps people track their workouts",
       image: "/blog.png",
       tag: "",
@@ -211,7 +234,22 @@ function Projects() {
                                 : "",
                           }}
                         />
-                        <div>Testing</div>
+                        <div className="flex gap-6 flex-1 items-center overflow-y-auto flex-wrap justify-center">
+                          {project.technologies.map((technology) => (
+                            <img
+                              className="w-1/4"
+                              src={
+                                skills[technology as keyof Object]?.svg ||
+                                "default.svg"
+                              }
+                              alt={
+                                skills[technology as keyof Object]?.name ||
+                                "Unknown"
+                              }
+                              key={technology}
+                            ></img>
+                          ))}
+                        </div>
                       </div>
                     </div>
                   </div>
