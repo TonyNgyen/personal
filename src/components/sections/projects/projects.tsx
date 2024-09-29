@@ -259,6 +259,7 @@ function Projects() {
                               skills[technology as keyof Object]?.name ||
                               "Unknown"
                             }
+                            key={technology}
                           ></img>
                         ))}
                       </div>
