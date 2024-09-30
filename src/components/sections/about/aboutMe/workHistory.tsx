@@ -18,7 +18,7 @@ function WorkHistory() {
           Integrated existing AWS API with dashboard to provide real time
           updates to dashboard for users
         </li>
-        <li>Created charts using ChartJS</li>
+        <li>Translated exported machine learning code into python for AWS</li>
       </ul>
     </div>
   );

@@ -3,7 +3,7 @@ import React from "react";
 function Contact() {
   return (
     <div
-      className="bg-[radial-gradient(#2f2f30_1px,transparent_1px)] [background-size:24px_24px] flex flex-col justify-center items-center mx-auto p-10 gap-3 "
+      className="bg-black border-t-zinc-300 border bg-opacity-15 flex flex-col justify-center items-center mx-auto p-10 gap-3 "
       id="contact"
     >
       <h1 className="mx-auto text-3xl font-bold text-zinc-50 mb-10">Contact</h1>

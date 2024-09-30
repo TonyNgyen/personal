@@ -79,7 +79,7 @@ function Skills() {
     ],
   ];
   return (
-    <div className="flex-1 flex">
+    <div className="flex-1 flex flex-shrink-0">
       <div className="flex-1 bg-zinc-800 border-stone-400 border rounded-lg p-5 pb-7 flex-col">
         <div className="text-2xl mb-7">
           <h1 className="mb-2 font-bold">Skills</h1>
@@ -99,7 +99,7 @@ function Skills() {
             </span>
           )}
         </div>
-        <div className="grid grid-cols-3 place-items-center gap-5 min-h-80">
+        <div className="grid grid-cols-3 place-items-center gap-5 min-h-96">
           {skills[select].map((skill) => (
             <div className="w-7/12" key={skill.name}>
               <img src={skill.svg} alt={skill.name} className="" />

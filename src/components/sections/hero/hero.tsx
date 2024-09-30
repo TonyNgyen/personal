@@ -33,7 +33,7 @@ let cardInformation = [
 
 function Hero() {
   return (
-    <div className="min-h-[calc(100vh-90px)] pb-10 flex flex-col items-center gap-10 pt-[5rem] bg-[radial-gradient(#2f2f30_1px,transparent_1px)] [background-size:24px_24px]">
+    <div className="min-h-[calc(100vh-90px)] pb-10 flex flex-col items-center gap-10 pt-[5rem] bg-[radial-gradient(#48484a_1px,transparent_1px)] [background-size:40px_40px]">
       <div className="flex items-center gap-7">
         <div className="flex items-center">
           <Image
@@ -57,7 +57,6 @@ function Hero() {
                 I primarily specialize in React, NextJS, JavaScript, and MongoDB
                 and am open to utilizing the many techhnologies I am experienced
                 in and learning new ones!
-                Testing
               </h1>
             </div>
           </div>

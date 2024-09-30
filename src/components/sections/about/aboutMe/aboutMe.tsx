@@ -24,19 +24,18 @@ function AboutMe() {
       </div>
 
       {!career ? (
-        <h2>
+        <h2 className="leading-8">
           I&apos;m a software engineer with a focus on full-stack development. I
           primarily specialize in React, NextJS, JavaScript, and MongoDB but am
           open to utilizing the many techhnologies I am experienced in as well
           as learning new ones.
         </h2>
       ) : (
-        <h2>
+        <h2 className="leading-8">
           Hey this is for getting to know me outside of my career! I love to
           explore new restaurants and expose myself to new experiences and food.
           On my freetime, besides working on side projects, I like to go to the
-          gym and watch NBA basketball. I rarely play video games, but I will
-          admit that it was a huge part of my childhood and teenage years.{" "}
+          gym and watch NBA basketball.
         </h2>
       )}
     </div>
