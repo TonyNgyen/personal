@@ -156,7 +156,7 @@ function Projects() {
       className="bg-[radial-gradient(#2f2f30_1px,transparent_1px)] [background-size:24px_24px]"
       id="projects"
     >
-      <div className="w-9/12 mx-auto p-10 flex flex-col gap-3">
+      <div className="w-10/12 mx-auto p-10 flex flex-col gap-3">
         <h1 className="mx-auto text-3xl font-bold text-zinc-50 mb-10">
           Projects
         </h1>
@@ -261,7 +261,7 @@ function Projects() {
                     <div className="aspect-video bg-white/10 rounded-lg"></div>
                   </div>
                   <div className="flex-1 flex flex-col gap-3">
-                    <div className="flex-1 bg-white/10 rounded-lg px-3 py-2">
+                    <div className="h-1/2 bg-white/10 rounded-lg px-3 py-2 overflow-y-auto">
                       <h1 className="text-lg">Description</h1>
                       <div
                         className="w-[60px] h-[7px] rounded-full my-1"
@@ -274,7 +274,7 @@ function Projects() {
                       />
                       <h2>{project.longDescription}</h2>
                     </div>
-                    <div className="flex-1 bg-white/10 rounded-lg px-3 py-2 flex flex-col">
+                    <div className="h-1/2 bg-white/10 rounded-lg px-3 py-2 flex flex-col">
                       <h1 className="text-lg">Technologies</h1>
                       <div
                         className="w-[60px] h-[7px] rounded-full my-1"
@@ -285,21 +285,23 @@ function Projects() {
                               : "",
                         }}
                       />
-                      <div className="flex gap-4 flex-1 items-center overflow-x-auto">
-                        {project.technologies.map((technology) => (
-                          <img
-                            className="w-[50px] h-[50px]"
-                            src={
-                              skills[technology as keyof Object]?.svg ||
-                              "default.svg"
-                            }
-                            alt={
-                              skills[technology as keyof Object]?.name ||
-                              "Unknown"
-                            }
-                            key={technology}
-                          ></img>
-                        ))}
+                      <div>
+                        <div className="flex gap-4 items-center overflow-x-auto">
+                          {project.technologies.map((technology) => (
+                            <img
+                              className="w-[50px] h-[50px]"
+                              src={
+                                skills[technology as keyof Object]?.svg ||
+                                "default.svg"
+                              }
+                              alt={
+                                skills[technology as keyof Object]?.name ||
+                                "Unknown"
+                              }
+                              key={technology}
+                            ></img>
+                          ))}
+                        </div>
                       </div>
                     </div>
                   </div>

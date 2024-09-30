@@ -15,7 +15,11 @@ function AboutMe() {
             className="data-[state=checked]:bg-green-500 data-[state=unchecked]:bg-zinc-100"
             onCheckedChange={() => setCareer(!career)}
           />
-          {!career ? <h2 className="text-xl font-semibold">Career</h2> : <h2 className="text-xl text-green-400 font-semibold">Personal</h2>}
+          {!career ? (
+            <h2 className="text-xl font-semibold">Career</h2>
+          ) : (
+            <h2 className="text-xl text-green-400 font-semibold">Personal</h2>
+          )}
         </div>
       </div>
 
@@ -27,7 +31,13 @@ function AboutMe() {
           as learning new ones.
         </h2>
       ) : (
-        <h2>Hey!</h2>
+        <h2>
+          Hey this is for getting to know me outside of my career! I love to
+          explore new restaurants and expose myself to new experiences and food.
+          On my freetime, besides working on side projects, I like to go to the
+          gym and watch NBA basketball. I rarely play video games, but I will
+          admit that it was a huge part of my childhood and teenage years.{" "}
+        </h2>
       )}
     </div>
   );
