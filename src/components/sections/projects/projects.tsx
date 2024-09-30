@@ -9,67 +9,83 @@ function Projects() {
   const [isMobile, setIsMobile] = useState<boolean | undefined>(false);
   type Skill = {
     name: string;
+    color: string;
     svg: string;
   };
   const skills: { [key: string]: Skill } = {
     nextjs: {
       name: "NextJS",
+      color: "#111111",
       svg: "https://cdn.worldvectorlogo.com/logos/next-js.svg",
     },
     react: {
       name: "React",
+      color: "#0485a7",
       svg: "https://cdn.worldvectorlogo.com/logos/react-2.svg",
     },
     javascript: {
       name: "Javascript",
+      color: "#c5b218",
       svg: "https://cdn.worldvectorlogo.com/logos/logo-javascript.svg",
     },
     html: {
       name: "HTML",
+      color: "#9f351b",
       svg: "https://cdn.worldvectorlogo.com/logos/html-1.svg",
     },
     css: {
       name: "CSS",
+      color: "#111111",
       svg: "https://cdn.worldvectorlogo.com/logos/css-3.svg",
     },
     tailwindcss: {
       name: "Tailwind CSS",
+      color: "#111111",
       svg: "https://cdn.worldvectorlogo.com/logos/tailwind-css-2.svg",
     },
     sql: {
       name: "SQL",
+      color: "#111111",
       svg: "https://www.svgrepo.com/show/331760/sql-database-generic.svg",
     },
     mongodb: {
       name: "MongoDB",
+      color: "#111111",
       svg: "https://cdn.worldvectorlogo.com/logos/mongodb-icon-1.svg",
     },
     python: {
       name: "Python",
+      color: "#111111",
       svg: "https://cdn.worldvectorlogo.com/logos/python-5.svg",
     },
     bootstrap: {
       name: "Bootstrap",
+      color: "#111111",
       svg: "https://cdn.worldvectorlogo.com/logos/bootstrap-5.svg",
     },
     java: {
       name: "Java",
+      color: "#111111",
       svg: "https://cdn.worldvectorlogo.com/logos/java-4.svg",
     },
     c: {
       name: "C",
+      color: "#111111",
       svg: "https://cdn.worldvectorlogo.com/logos/c-1.svg",
     },
     cpp: {
       name: "C++",
+      color: "#111111",
       svg: "https://cdn.worldvectorlogo.com/logos/c.svg",
     },
     flask: {
       name: "Flask",
+      color: "#111111",
       svg: "https://cdn.worldvectorlogo.com/logos/flask.svg",
     },
     pandas: {
       name: "Pandas",
+      color: "#111111",
       svg: "https://cdn.worldvectorlogo.com/logos/pandas.svg",
     },
   };
@@ -77,8 +93,7 @@ function Projects() {
     {
       name: "GymTracker",
       description: "A web app that helps people track their workouts",
-      longDescription:
-        "A web app that helps people track their workouts. This allows for easier tracking since by updating one exercise during a workout, it updates that exercise for all other workouts that also use that exercise. This means that all workouts will always use the latest weight leading to easier tracking and improvements! Combined with a streak system and informational graphs, this app helps users achieve their fitness goals.",
+      longDescription: "A web app that helps people track their workouts",
       image: "/gymtracker.png",
       tag: "",
       technologies: [
@@ -154,7 +169,7 @@ function Projects() {
 
   return (
     <div
-      className="bg-[radial-gradient(#48484a_1px,transparent_1px)] [background-size:40px_40px]"
+      className="bg-[radial-gradient(#2f2f30_1px,transparent_1px)] [background-size:24px_24px]"
       id="projects"
     >
       <div className="w-10/12 mx-auto p-10 flex flex-col gap-3">
@@ -211,7 +226,7 @@ function Projects() {
                 <div className="flex h-full gap-3">
                   <div className="flex-1">
                     <div className="flex flex-col h-full gap-3">
-                      <div className="h-1/2 bg-white/10 rounded-lg px-3 py-2 flex-shrink-0">
+                      <div className="flex-1 bg-white/10 rounded-lg px-3 py-2">
                         <h1 className="text-lg">Description</h1>
                         <div
                           className="w-[60px] h-[7px] rounded-full my-1"
@@ -224,7 +239,7 @@ function Projects() {
                         />
                         <h2>{project.longDescription}</h2>
                       </div>
-                      <div className="h-1/2 bg-white/10 rounded-lg px-3 py-2">
+                      <div className="flex-1 bg-white/10 rounded-lg px-3 py-2">
                         <h1 className="text-lg">Technologies</h1>
                         <div
                           className="w-[60px] h-[7px] rounded-full my-1"
@@ -235,10 +250,10 @@ function Projects() {
                                 : "",
                           }}
                         />
-                        <div className="grid grid-cols-3 overflow-y-auto h-5/6 justify-items-center content-start gap-y-6 gap-x-0">
+                        <div className="flex gap-6 flex-1 items-center overflow-y-auto flex-wrap justify-center">
                           {project.technologies.map((technology) => (
                             <img
-                              className="w-[70px]"
+                              className="w-1/4"
                               src={
                                 skills[technology as keyof Object]?.svg ||
                                 "default.svg"
@@ -286,11 +301,11 @@ function Projects() {
                               : "",
                         }}
                       />
-                      <div className="h-full flex">
-                        <div className="flex gap-3 items-center overflow-x-auto">
+                      <div>
+                        <div className="flex gap-4 items-center overflow-x-auto">
                           {project.technologies.map((technology) => (
                             <img
-                              className="w-[70px] h-[50px] flex-shrink-0"
+                              className="w-[50px] h-[50px]"
                               src={
                                 skills[technology as keyof Object]?.svg ||
                                 "default.svg"

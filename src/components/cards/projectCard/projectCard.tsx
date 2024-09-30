@@ -17,7 +17,7 @@ interface Information {
 }
 
 function ProjectCard({ data, skills }: { data: Information; skills: Object }) {
-  console.log(data.technologies)
+  console.log(skills)
   return (
     <div className="bg-zinc-800 rounded-lg border-stone-400 border flex flex-col overflow-hidden">
       <div className="w-full bg-gray-400">
@@ -41,7 +41,8 @@ function ProjectCard({ data, skills }: { data: Information; skills: Object }) {
             <div className={styles.chips} style={{'--speed': `15000ms`} as React.CSSProperties}>
               {data.technologies.map((technology) => (
                 <Chip
-                  technology={skills[technology as keyof Object].name}
+                  content={skills[technology as keyof Object].name}
+                  color={skills[technology as keyof Object].color}
                   key={technology}
                 />
               ))}
@@ -49,7 +50,8 @@ function ProjectCard({ data, skills }: { data: Information; skills: Object }) {
             <div className={styles.chips} style={{'--speed': `15000ms`} as React.CSSProperties}>
               {data.technologies.map((technology) => (
                 <Chip
-                  technology={skills[technology as keyof Object].name}
+                  content={skills[technology as keyof Object].name}
+                  color={skills[technology as keyof Object].color}
                   key={technology}
                 />
               ))}
