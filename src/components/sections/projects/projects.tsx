@@ -35,47 +35,47 @@ function Projects() {
     },
     css: {
       name: "CSS",
-      color: "#111111",
+      color: "#264de4",
       svg: "https://cdn.worldvectorlogo.com/logos/css-3.svg",
     },
     tailwindcss: {
       name: "Tailwind CSS",
-      color: "#111111",
+      color: "#06b6d4",
       svg: "https://cdn.worldvectorlogo.com/logos/tailwind-css-2.svg",
     },
     sql: {
       name: "SQL",
-      color: "#111111",
+      color: "#00758F",
       svg: "https://www.svgrepo.com/show/331760/sql-database-generic.svg",
     },
-    mongodb: {
+    mongodb: { 
       name: "MongoDB",
-      color: "#111111",
+      color: "#00684a",
       svg: "https://cdn.worldvectorlogo.com/logos/mongodb-icon-1.svg",
     },
     python: {
       name: "Python",
-      color: "#111111",
+      color: "#4584b6",
       svg: "https://cdn.worldvectorlogo.com/logos/python-5.svg",
     },
     bootstrap: {
       name: "Bootstrap",
-      color: "#111111",
+      color: "#563d7c",
       svg: "https://cdn.worldvectorlogo.com/logos/bootstrap-5.svg",
     },
     java: {
       name: "Java",
-      color: "#111111",
+      color: "#f89820",
       svg: "https://cdn.worldvectorlogo.com/logos/java-4.svg",
     },
     c: {
       name: "C",
-      color: "#111111",
+      color: "#64318c",
       svg: "https://cdn.worldvectorlogo.com/logos/c-1.svg",
     },
     cpp: {
       name: "C++",
-      color: "#111111",
+      color: "#00599c",
       svg: "https://cdn.worldvectorlogo.com/logos/c.svg",
     },
     flask: {
@@ -85,7 +85,7 @@ function Projects() {
     },
     pandas: {
       name: "Pandas",
-      color: "#111111",
+      color: "#150458",
       svg: "https://cdn.worldvectorlogo.com/logos/pandas.svg",
     },
   };
@@ -169,7 +169,7 @@ function Projects() {
 
   return (
     <div
-      className="bg-[radial-gradient(#2f2f30_1px,transparent_1px)] [background-size:24px_24px]"
+      className="bg-[radial-gradient(#48484a_1px,transparent_1px)] [background-size:40px_40px]"
       id="projects"
     >
       <div className="w-10/12 mx-auto p-10 flex flex-col gap-3">
