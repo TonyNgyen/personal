@@ -16,7 +16,13 @@ interface Information {
   };
 }
 
-function ProjectCard({ data, skills }: { data: Information; skills: Object }) {
+interface Skill {
+  name: string;
+  color: string;
+  svg: string;
+}
+
+function ProjectCard({ data, skills }: { data: Information; skills: { [key: string]: Skill } }) {
   console.log(skills)
   return (
     <div className="bg-zinc-800 rounded-lg border-stone-400 border flex flex-col overflow-hidden">
