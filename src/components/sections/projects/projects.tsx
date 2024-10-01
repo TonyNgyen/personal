@@ -226,7 +226,7 @@ function Projects() {
                 <div className="flex h-full gap-3">
                   <div className="flex-1">
                     <div className="flex flex-col h-full gap-3">
-                      <div className="flex-1 bg-white/10 rounded-lg px-3 py-2">
+                      <div className="h-1/2 bg-white/10 rounded-lg px-3 py-2 flex-shrink-0">
                         <h1 className="text-lg">Description</h1>
                         <div
                           className="w-[60px] h-[7px] rounded-full my-1"
@@ -239,7 +239,7 @@ function Projects() {
                         />
                         <h2>{project.longDescription}</h2>
                       </div>
-                      <div className="flex-1 bg-white/10 rounded-lg px-3 py-2">
+                      <div className="h-1/2 bg-white/10 rounded-lg px-3 py-2 flex-shrink-0 overflow-auto">
                         <h1 className="text-lg">Technologies</h1>
                         <div
                           className="w-[60px] h-[7px] rounded-full my-1"
@@ -301,11 +301,11 @@ function Projects() {
                               : "",
                         }}
                       />
-                      <div>
+                      <div className="flex h-full">
                         <div className="flex gap-4 items-center overflow-x-auto">
                           {project.technologies.map((technology) => (
                             <img
-                              className="w-[50px] h-[50px]"
+                              className="w-[60px] h-[60px]"
                               src={
                                 skills[technology as keyof Object]?.svg ||
                                 "default.svg"

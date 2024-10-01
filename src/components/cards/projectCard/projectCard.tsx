@@ -23,7 +23,6 @@ interface Skill {
 }
 
 function ProjectCard({ data, skills }: { data: Information; skills: { [key: string]: Skill } }) {
-  console.log(skills)
   return (
     <div className="bg-zinc-800 rounded-lg border-stone-400 border flex flex-col overflow-hidden">
       <div className="w-full bg-gray-400">
@@ -35,10 +34,10 @@ function ProjectCard({ data, skills }: { data: Information; skills: { [key: stri
           <h2 className="w-[190px] text-sm">{data.description}</h2>
         </div>
         <div className="flex justify-between">
-          <h1 className="font-semibold">See Live</h1>
-          {/* <h1 className="px-3 rounded-md border-white border bg-zinc-600 font-medium">
+          <h1 className="px-3 rounded-md border-white bg-green-600 font-semibold">See Live</h1>
+          <h1 className="px-3 rounded-md border-white border bg-zinc-600 font-semibold">
             Learn More
-          </h1> */}
+          </h1>
         </div>
         <div
           className={`border-t-white border border-transparent pt-3 ${styles.bigWrapper}`}

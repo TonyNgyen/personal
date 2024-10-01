@@ -10,7 +10,7 @@ let cardInformation = [
     description: "A web app that helps people track their workouts",
     image: "/gymtracker.png",
     tag: "",
-    technologies: ["React", "NextJS"],
+    technologies: ["react", "nextjs"],
     link: "",
   },
   {
@@ -18,7 +18,7 @@ let cardInformation = [
     description: "A web app that helps people track their workouts",
     image: "/kcalendar.png",
     tag: "",
-    technologies: ["React", "NextJS"],
+    technologies: ["react", "nextjs"],
     link: "",
   },
   {
@@ -26,10 +26,93 @@ let cardInformation = [
     description: "A web app that helps people track their workouts",
     image: "/blog.png",
     tag: "",
-    technologies: ["React", "NextJS"],
+    technologies: ["react", "nextjs"],
     link: "",
   },
 ];
+
+type Skill = {
+  name: string;
+  color: string;
+  svg: string;
+};
+const skills: { [key: string]: Skill } = {
+  nextjs: {
+    name: "NextJS",
+    color: "#111111",
+    svg: "https://cdn.worldvectorlogo.com/logos/next-js.svg",
+  },
+  react: {
+    name: "React",
+    color: "#0485a7",
+    svg: "https://cdn.worldvectorlogo.com/logos/react-2.svg",
+  },
+  javascript: {
+    name: "Javascript",
+    color: "#c5b218",
+    svg: "https://cdn.worldvectorlogo.com/logos/logo-javascript.svg",
+  },
+  html: {
+    name: "HTML",
+    color: "#9f351b",
+    svg: "https://cdn.worldvectorlogo.com/logos/html-1.svg",
+  },
+  css: {
+    name: "CSS",
+    color: "#264de4",
+    svg: "https://cdn.worldvectorlogo.com/logos/css-3.svg",
+  },
+  tailwindcss: {
+    name: "Tailwind CSS",
+    color: "#06b6d4",
+    svg: "https://cdn.worldvectorlogo.com/logos/tailwind-css-2.svg",
+  },
+  sql: {
+    name: "SQL",
+    color: "#00758F",
+    svg: "https://www.svgrepo.com/show/331760/sql-database-generic.svg",
+  },
+  mongodb: { 
+    name: "MongoDB",
+    color: "#00684a",
+    svg: "https://cdn.worldvectorlogo.com/logos/mongodb-icon-1.svg",
+  },
+  python: {
+    name: "Python",
+    color: "#4584b6",
+    svg: "https://cdn.worldvectorlogo.com/logos/python-5.svg",
+  },
+  bootstrap: {
+    name: "Bootstrap",
+    color: "#563d7c",
+    svg: "https://cdn.worldvectorlogo.com/logos/bootstrap-5.svg",
+  },
+  java: {
+    name: "Java",
+    color: "#f89820",
+    svg: "https://cdn.worldvectorlogo.com/logos/java-4.svg",
+  },
+  c: {
+    name: "C",
+    color: "#64318c",
+    svg: "https://cdn.worldvectorlogo.com/logos/c-1.svg",
+  },
+  cpp: {
+    name: "C++",
+    color: "#00599c",
+    svg: "https://cdn.worldvectorlogo.com/logos/c.svg",
+  },
+  flask: {
+    name: "Flask",
+    color: "#111111",
+    svg: "https://cdn.worldvectorlogo.com/logos/flask.svg",
+  },
+  pandas: {
+    name: "Pandas",
+    color: "#150458",
+    svg: "https://cdn.worldvectorlogo.com/logos/pandas.svg",
+  },
+};
 
 function Hero() {
   return (
@@ -79,7 +162,7 @@ function Hero() {
       <div className="">
         <div className="flex gap-4">
           {cardInformation.map((project) => (
-            <HeroCard data={project} key={project.name} />
+            <HeroCard data={project} key={project.name} skills={skills} />
           ))}
         </div>
       </div>
