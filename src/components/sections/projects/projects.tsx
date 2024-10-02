@@ -268,7 +268,7 @@ function Projects() {
                         <div className="flex flex-1 items-center overflow-y-auto flex-wrap justify-center h-60">
                           {project.technologies.map((technology) => (
                             <img
-                              className="w-1/4 m-4"
+                              className="w-1/4 m-2"
                               src={
                                 skills[technology as keyof Object]?.svg ||
                                 "default.svg"
