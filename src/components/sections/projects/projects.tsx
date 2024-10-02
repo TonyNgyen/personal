@@ -48,7 +48,7 @@ function Projects() {
       color: "#00758F",
       svg: "https://www.svgrepo.com/show/331760/sql-database-generic.svg",
     },
-    mongodb: { 
+    mongodb: {
       name: "MongoDB",
       color: "#00684a",
       svg: "https://cdn.worldvectorlogo.com/logos/mongodb-icon-1.svg",
@@ -142,10 +142,23 @@ function Projects() {
       name: "Personal Website / Blog",
       description: "My personal website that also doubles as my blog!",
       longDescription:
-        "My personal website that shows all of my skills and projects! It also serves as my blog where I post about updates to my projects and what I've been up to. There is a dashboard to this website that I use to add skills, projects, and blogs without needing to go directly into the code!",
+        "My personal website that shows all of my skills and projects! It also serves as my blog where I post about updates to my projects My personal website that shows all of my skills and projects! It also serves as my blog where I post about updates to my projects and what I've been up to. There is a dashboard to this website that I use to add skills, projects, and blogs without needing to go directly into the code!",
       image: "/personalWebsite.png",
       tag: "",
-      technologies: ["react", "nextjs", "html", "tailwindcss", "mongodb"],
+      technologies: [
+        "react",
+        "nextjs",
+        "html",
+        "tailwindcss",
+        "mongodb",
+        "python",
+        "java",
+        "c",
+        "cpp",
+        "pandas",
+        "flask",
+        "bootstrap",
+      ],
       link: "",
       colors: {
         dark: ["142", "69", "58"],
@@ -172,7 +185,7 @@ function Projects() {
       className="bg-[radial-gradient(#48484a_1px,transparent_1px)] [background-size:40px_40px]"
       id="projects"
     >
-      <div className="w-10/12 mx-auto p-10 flex flex-col gap-3">
+      <div className="w-10/12 mx-auto p-10 flex flex-col gap-3 min-h-screen">
         <h1 className="mx-auto text-3xl font-bold text-zinc-50 mb-10">
           Projects
         </h1>
@@ -226,7 +239,7 @@ function Projects() {
                 <div className="flex h-full gap-3">
                   <div className="flex-1">
                     <div className="flex flex-col h-full gap-3">
-                      <div className="h-1/2 bg-white/10 rounded-lg px-3 py-2 flex-shrink-0">
+                      <div className="h-1/2 bg-white/10 rounded-lg px-3 py-2 flex flex-col overflow-auto">
                         <h1 className="text-lg">Description</h1>
                         <div
                           className="w-[60px] h-[7px] rounded-full my-1"
@@ -237,9 +250,11 @@ function Projects() {
                                 : "",
                           }}
                         />
-                        <h2>{project.longDescription}</h2>
+                        <h2 className="bg-green-600 overflow-y-auto">
+                          {project.longDescription}
+                        </h2>
                       </div>
-                      <div className="h-1/2 bg-white/10 rounded-lg px-3 py-2 flex-shrink-0 overflow-auto">
+                      <div className="h-1/2 bg-white/10 rounded-lg px-3 py-2 overflow-y-auto">
                         <h1 className="text-lg">Technologies</h1>
                         <div
                           className="w-[60px] h-[7px] rounded-full my-1"
@@ -250,7 +265,7 @@ function Projects() {
                                 : "",
                           }}
                         />
-                        <div className="flex gap-6 flex-1 items-center overflow-y-auto flex-wrap justify-center">
+                        <div className="flex flex-1 items-center overflow-y-auto flex-wrap justify-center gap-3">
                           {project.technologies.map((technology) => (
                             <img
                               className="w-1/4"
@@ -305,7 +320,7 @@ function Projects() {
                         <div className="flex gap-4 items-center overflow-x-auto">
                           {project.technologies.map((technology) => (
                             <img
-                              className="w-[60px] h-[60px]"
+                              className="w-[60px] h-[60px] flex-shrink-0"
                               src={
                                 skills[technology as keyof Object]?.svg ||
                                 "default.svg"
@@ -332,3 +347,25 @@ function Projects() {
 }
 
 export default Projects;
+
+{
+  /* <div className="grid grid-rows-2 grid-flow-col grid-cols-2 gap-2 h-full">
+<div className="col-span-1 row-span-1 bg-blue-500 overflow-y-auto h-48">
+  <div>Description</div>
+  <div
+    className="w-[60px] h-[7px] rounded-full my-1"
+    style={{
+      backgroundColor:
+        isHovered === index
+          ? `hsl(${project.colors.dark[0]},${project.colors.dark[1]}%,${project.colors.dark[2]}%)`
+          : "",
+    }}
+  />
+  <p className="bg-green-600">{project.longDescription}</p>
+</div>
+<div className="col-span-1 row-span-1 bg-green-500 h-48">
+  <div>Technologies</div>
+</div>
+<div className="row-span-2 col-span-1 bg-red-500">01</div>
+</div> */
+}

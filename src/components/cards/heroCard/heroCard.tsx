@@ -29,7 +29,7 @@ function HeroCard({ data, skills }: { data: Information; skills: { [key: string]
       </div>
       <div className="flex justify-between">
         <h1 className="px-3 rounded-md border-white bg-green-600 font-semibold">See Live</h1>
-        <h1 className="px-3 rounded-md border-white border bg-zinc-600 font-semibold">
+        <h1 className="px-3 rounded-md border-zinc-300 border bg-zinc-600 font-semibold">
           Learn More
         </h1>
       </div>

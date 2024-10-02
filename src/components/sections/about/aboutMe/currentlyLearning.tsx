@@ -18,9 +18,9 @@ function CurrentlyLearning() {
   return (
     <div className="flex-1 rounded-lg bg-zinc-800 border-stone-400 border p-5 flex flex-col">
       <h1 className="text-2xl font-bold">Currently Learning</h1>
-      <div className="flex gap-4 justify-evenly items-center">
+      <div className="flex flex-1 gap-4 justify-evenly items-center">
         {skills.map((skill) => (
-          <div className="w-[30%] p-4" key={skill.name}>
+          <div className="w-[30%] p-4 flex-shrink-0" key={skill.name}>
             <img src={skill.svg} alt={skill.name} className="" />
           </div>
         ))}
