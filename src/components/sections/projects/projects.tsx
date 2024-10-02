@@ -239,7 +239,7 @@ function Projects() {
                 <div className="flex h-full gap-3">
                   <div className="flex-1">
                     <div className="flex flex-col h-full gap-3">
-                      <div className="h-1/2 bg-white/10 rounded-lg px-3 py-2 flex flex-col overflow-auto">
+                      <div className="h-1/2 bg-white/10 rounded-lg px-3 py-2 flex flex-col">
                         <h1 className="text-lg">Description</h1>
                         <div
                           className="w-[60px] h-[7px] rounded-full my-1"
@@ -250,7 +250,7 @@ function Projects() {
                                 : "",
                           }}
                         />
-                        <h2 className="bg-green-600 overflow-y-auto">
+                        <h2 className="overflow-y-auto flex h-60">
                           {project.longDescription}
                         </h2>
                       </div>
@@ -265,10 +265,10 @@ function Projects() {
                                 : "",
                           }}
                         />
-                        <div className="flex flex-1 items-center overflow-y-auto flex-wrap justify-center gap-3">
+                        <div className="flex flex-1 items-center overflow-y-auto flex-wrap justify-center h-60">
                           {project.technologies.map((technology) => (
                             <img
-                              className="w-1/4"
+                              className="w-1/4 m-4"
                               src={
                                 skills[technology as keyof Object]?.svg ||
                                 "default.svg"
@@ -288,7 +288,7 @@ function Projects() {
                 </div>
               ) : (
                 <div className="flex h-full flex-col gap-3">
-                  <div className="flex-1">
+                  <div className="">
                     <div className="aspect-video bg-white/10 rounded-lg"></div>
                   </div>
                   <div className="flex-1 flex flex-col gap-3">
@@ -303,7 +303,7 @@ function Projects() {
                               : "",
                         }}
                       />
-                      <h2>{project.longDescription}</h2>
+                      <h2 className="overflow-y-auto flex max-h-24">{project.longDescription}</h2>
                     </div>
                     <div className="h-1/2 bg-white/10 rounded-lg px-3 py-2 flex flex-col">
                       <h1 className="text-lg">Technologies</h1>
