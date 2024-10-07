@@ -39,52 +39,52 @@ type Skill = {
 const skills: { [key: string]: Skill } = {
   nextjs: {
     name: "NextJS",
-    color: "#111111",
+    color: "#FFFFFF",
     svg: "https://cdn.worldvectorlogo.com/logos/next-js.svg",
   },
   react: {
     name: "React",
-    color: "#0485a7",
+    color: "#61dbfb",
     svg: "https://cdn.worldvectorlogo.com/logos/react-2.svg",
   },
   javascript: {
     name: "Javascript",
-    color: "#c5b218",
+    color: "#f0db4f",
     svg: "https://cdn.worldvectorlogo.com/logos/logo-javascript.svg",
   },
   html: {
     name: "HTML",
-    color: "#9f351b",
+    color: "#f38353",
     svg: "https://cdn.worldvectorlogo.com/logos/html-1.svg",
   },
   css: {
     name: "CSS",
-    color: "#264de4",
+    color: "#6993F5",
     svg: "https://cdn.worldvectorlogo.com/logos/css-3.svg",
   },
   tailwindcss: {
     name: "Tailwind CSS",
-    color: "#06b6d4",
+    color: "#a5f3fc",
     svg: "https://cdn.worldvectorlogo.com/logos/tailwind-css-2.svg",
   },
   sql: {
     name: "SQL",
-    color: "#00758F",
+    color: "#f29111",
     svg: "https://www.svgrepo.com/show/331760/sql-database-generic.svg",
   },
-  mongodb: { 
+  mongodb: {
     name: "MongoDB",
-    color: "#00684a",
+    color: "#00ed64",
     svg: "https://cdn.worldvectorlogo.com/logos/mongodb-icon-1.svg",
   },
   python: {
     name: "Python",
-    color: "#4584b6",
+    color: "#b5cee2",
     svg: "https://cdn.worldvectorlogo.com/logos/python-5.svg",
   },
   bootstrap: {
     name: "Bootstrap",
-    color: "#563d7c",
+    color: "#ab9ebe",
     svg: "https://cdn.worldvectorlogo.com/logos/bootstrap-5.svg",
   },
   java: {
@@ -94,22 +94,22 @@ const skills: { [key: string]: Skill } = {
   },
   c: {
     name: "C",
-    color: "#64318c",
+    color: "#c1acd1",
     svg: "https://cdn.worldvectorlogo.com/logos/c-1.svg",
   },
   cpp: {
     name: "C++",
-    color: "#00599c",
+    color: "#99bcd7",
     svg: "https://cdn.worldvectorlogo.com/logos/c.svg",
   },
   flask: {
     name: "Flask",
-    color: "#111111",
+    color: "#FFFFFF",
     svg: "https://cdn.worldvectorlogo.com/logos/flask.svg",
   },
   pandas: {
     name: "Pandas",
-    color: "#150458",
+    color: "#b8b3cc",
     svg: "https://cdn.worldvectorlogo.com/logos/pandas.svg",
   },
 };
