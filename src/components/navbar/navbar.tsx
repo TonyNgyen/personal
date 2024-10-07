@@ -30,7 +30,7 @@ function Navbar() {
           <Link href="">LinkedIn</Link>
           <Link href="">Resume</Link>
         </div>
-        <ModeToggle />
+        {/* <ModeToggle /> */}
       </div>
     </motion.nav>
   );
