@@ -10,8 +10,8 @@ let cardInformation = [
     description: "A web app that helps people track their workouts",
     image: "/gymtracker.png",
     tag: "",
-    technologies: ["react", "nextjs"],
-    link: "",
+    technologies: ["react", "nextjs", "javascript"],
+    link: "https://gymtracker-phi.vercel.app/",
   },
   {
     name: "KCalendar",
@@ -19,7 +19,7 @@ let cardInformation = [
     image: "/kcalendar.png",
     tag: "",
     technologies: ["react", "nextjs"],
-    link: "",
+    link: "https://k-calendar-2.vercel.app/",
   },
   {
     name: "Personal Website / Blog",
@@ -27,7 +27,7 @@ let cardInformation = [
     image: "/blog.png",
     tag: "",
     technologies: ["react", "nextjs"],
-    link: "",
+    link: "https://personal-one-xi.vercel.app/",
   },
 ];
 

@@ -31,10 +31,10 @@ function ProjectCard({ data, skills }: { data: Information; skills: { [key: stri
       <div className="flex flex-col gap-3 px-3 py-3">
         <div className="">
           <h1 className="mb-2 text-xl">{data.name}</h1>
-          <h2 className="w-[190px] text-sm">{data.description}</h2>
+          <h2 className="w-[200px] text-sm">{data.description}</h2>
         </div>
         <div className="flex justify-between">
-          <h1 className="px-3 rounded-md border-white bg-green-600 font-semibold">See Live</h1>
+          <a target="_blank" href={data.link} className="px-3 rounded-md border-white bg-green-600 font-semibold">See Live</a>
           {/* <h1 className="px-3 rounded-md border-zinc-300 border bg-zinc-600 font-semibold">
             Learn More
           </h1> */}
@@ -43,7 +43,7 @@ function ProjectCard({ data, skills }: { data: Information; skills: { [key: stri
           className={`border-t-white border border-transparent pt-3 ${styles.bigWrapper}`}
         >
           <div className={`${styles.wrapper}`}>
-            <div className={styles.chips} style={{'--speed': `15000ms`} as React.CSSProperties}>
+            <div className={styles.chips} style={{'--speed': `25000ms`} as React.CSSProperties}>
               {data.technologies.map((technology) => (
                 <Chip
                   content={skills[technology as keyof Object].name}
@@ -52,7 +52,7 @@ function ProjectCard({ data, skills }: { data: Information; skills: { [key: stri
                 />
               ))}
             </div>
-            <div className={styles.chips} style={{'--speed': `15000ms`} as React.CSSProperties}>
+            <div className={styles.chips} style={{'--speed': `25000ms`} as React.CSSProperties}>
               {data.technologies.map((technology) => (
                 <Chip
                   content={skills[technology as keyof Object].name}
