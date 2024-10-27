@@ -121,8 +121,8 @@ function Hero() {
         <div className="flex items-center">
           <Image
             src="/profile.jpg"
-            width={180}
-            height={180}
+            width={175}
+            height={175}
             alt="Picture of me"
             className="rounded-full"
           />
