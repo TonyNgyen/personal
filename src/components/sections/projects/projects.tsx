@@ -167,7 +167,7 @@ function Projects() {
     },
     {
       name: "Demo Blog",
-      description: "A blog website that I built when learning Fullstack",
+      description: "A blog website that I built when learning full stack!",
       longDescription: "A web app that helps people track their workouts",
       image: "/blog.png",
       tag: "",

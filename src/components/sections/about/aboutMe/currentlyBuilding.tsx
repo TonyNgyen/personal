@@ -14,9 +14,9 @@ function CurrentlyBuilding() {
         <img src={project.image} className="h-40 rounded-lg" />
         <div>
           <h1 className="text-white text-3xl font-bold mb-2">{project.name}</h1>
-          <Link href="" className="text-lg px-2 py-1 rounded-md border-zinc-300 border bg-zinc-600 font-semibold">
+          {/* <Link href="" className="text-lg px-2 py-1 rounded-md border-zinc-300 border bg-zinc-600 font-semibold">
             Learn More
-          </Link>
+          </Link> */}
         </div>
       </div>
     </div>

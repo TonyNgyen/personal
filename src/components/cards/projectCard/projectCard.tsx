@@ -30,7 +30,7 @@ function ProjectCard({ data, skills }: { data: Information; skills: { [key: stri
       </div>
       <div className="flex flex-col gap-3 px-3 py-3">
         <div className="">
-          <h1 className="mb-2 text-xl">{data.name}</h1>
+          <h1 className="mb-2 text-xl font-semibold">{data.name}</h1>
           <h2 className="w-[200px] text-sm">{data.description}</h2>
         </div>
         <div className="flex justify-between">

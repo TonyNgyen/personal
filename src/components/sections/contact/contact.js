@@ -42,9 +42,8 @@ function Contact() {
       id="contact"
     >
       <h1 className="mx-auto text-3xl font-bold text-zinc-50 mb-10">Contact</h1>
-      <div className="bg-zinc-800 p-5 py-8 w-6/12 rounded-lg">
+      <div className="bg-zinc-800 p-5 py-8 w-[35%] rounded-lg">
         <article className="font-montserrat">
-          <h2 className="text-xl mx-auto lg:w-11/12 text-center w-10/12"></h2>
           <form
             className="lg:w-11/12 mx-auto rounded-lg w-10/12"
             ref={form}

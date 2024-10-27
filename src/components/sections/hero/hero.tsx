@@ -117,13 +117,13 @@ const skills: { [key: string]: Skill } = {
 function Hero() {
   return (
     <div className="min-h-[calc(100vh-90px)] pb-10 flex flex-col items-center gap-10 pt-[5rem] bg-[radial-gradient(#48484a_1px,transparent_1px)] [background-size:40px_40px]">
-      <div className="flex items-center gap-7">
+      <div className="flex items-center gap-8">
         <div className="flex items-center">
           <Image
-            src="/dog.jpg"
-            width={175}
-            height={175}
-            alt="Picture of the dog"
+            src="/profile.jpg"
+            width={180}
+            height={180}
+            alt="Picture of me"
             className="rounded-full"
           />
         </div>
@@ -152,9 +152,9 @@ function Hero() {
         <Link className="underline underline-offset-[2.5px]" href="#projects">
           Projects
         </Link>
-        <Link className="underline underline-offset-[2.5px]" href="#blog">
+        {/* <Link className="underline underline-offset-[2.5px]" href="#blog">
           Blog
-        </Link>
+        </Link> */}
         <Link className="underline underline-offset-[2.5px]" href="#contact">
           Contact
         </Link>
