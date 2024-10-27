@@ -27,12 +27,12 @@ function Navbar() {
       <div>Tony Nguyen</div>
       <div className="flex justify-center items-center gap-10">
         <div className="flex gap-10">
-          <Link href="https://www.linkedin.com/in/tony-nguyen-813923212/">
+          <a target="_blank" href="https://www.linkedin.com/in/tony-nguyen-813923212/">
             LinkedIn
-          </Link>
-          <Link href="https://docs.google.com/document/d/e/2PACX-1vTl_OLDhN3T-L3-Zk9schOdI6CgD9cAxHA-YNwx69YZJIbLwTdrYm_1Z-Dl8ueaeLu9Af1wByd06iMf/pub">
+          </a>
+          <a target="_blank" href="https://docs.google.com/document/d/1c1VIMb0f4NvHtkpGKNBEzm41B6aP-Nyzv3LttYFZGYI/edit?usp=drive_link">
             Resume
-          </Link>
+          </a>
         </div>
         {/* <ModeToggle /> */}
       </div>
