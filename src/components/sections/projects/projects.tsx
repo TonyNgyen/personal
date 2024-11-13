@@ -15,7 +15,7 @@ function Projects() {
   const skills: { [key: string]: Skill } = {
     nextjs: {
       name: "NextJS",
-      color: "#FFFFFF",
+      color: "#d3d3d4",
       svg: "https://cdn.worldvectorlogo.com/logos/next-js.svg",
     },
     react: {
@@ -80,7 +80,7 @@ function Projects() {
     },
     flask: {
       name: "Flask",
-      color: "#FFFFFF",
+      color: "#d3d3d4",
       svg: "https://cdn.worldvectorlogo.com/logos/flask.svg",
     },
     pandas: {
@@ -346,11 +346,11 @@ function Projects() {
   // );
   return (
     <div
-      className="bg-[radial-gradient(#48484a_1px,transparent_1px)] [background-size:40px_40px]"
+      className="bg-dottedBG dark:bg-[radial-gradient(#48484a_1px,transparent_1px)] bg-[radial-gradient(#d3d3d4_1px,transparent_1px)] [background-size:40px_40px]"
       id="projects"
     >
       <div className="w-9/12 mx-auto p-10 flex flex-col gap-3">
-        <h1 className="mx-auto text-3xl font-bold text-zinc-50 mb-10">
+        <h1 className="mx-auto text-3xl font-bold text-foreground mb-10">
           Projects
         </h1>
         <div className="">
@@ -363,7 +363,7 @@ function Projects() {
                 <div
                   key={project.name}
                   className={`duration-300 rounded-lg shadow-lg transition-all z-0 ${
-                    isHovered == index ? " opacity-100 " : " opacity-65 "
+                    isHovered == index ? " opacity-100 " : " dark:opacity-65 opacity-80 "
                   }`}
                   onMouseEnter={() => setIsHovered(index)}
                   style={{

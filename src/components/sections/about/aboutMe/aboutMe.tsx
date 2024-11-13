@@ -6,19 +6,19 @@ import { Switch } from "@/components/ui/switch";
 function AboutMe() {
   const [career, setCareer] = useState<boolean>(false);
   return (
-    <div className="flex-1 bg-zinc-800 border-stone-400 border rounded-lg p-5">
+    <div className="flex-1 bg-dottedBG border-stone-400 border rounded-lg p-5">
       <div className="flex flex-col mb-2">
-        <h1 className="text-2xl font-bold">About Me</h1>
+        <h1 className="text-2xl font-bold dark:text-stone-100">About Me</h1>
         <div className="flex items-center space-x-2">
           <Switch
             id="airplane-mode"
-            className="data-[state=checked]:bg-green-500 data-[state=unchecked]:bg-zinc-100"
+            className="data-[state=checked]:bg-switchChecked data-[state=unchecked]:dark:bg-zinc-200"
             onCheckedChange={() => setCareer(!career)}
           />
           {!career ? (
             <h2 className="text-xl font-semibold">Career</h2>
           ) : (
-            <h2 className="text-xl text-green-400 font-semibold">Personal</h2>
+            <h2 className="text-xl dark:text-green-400 text-green-500 font-semibold">Personal</h2>
           )}
         </div>
       </div>

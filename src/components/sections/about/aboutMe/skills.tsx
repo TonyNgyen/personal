@@ -80,19 +80,19 @@ function Skills() {
   ];
   return (
     <div className="flex-1 flex flex-shrink-0">
-      <div className="flex-1 bg-zinc-800 border-stone-400 border rounded-lg p-5 pb-7 flex-col">
+      <div className="flex-1 bg-card border-stone-400 border rounded-lg p-5 pb-7 flex-col">
         <div className="text-2xl mb-7">
           <h1 className="mb-2 font-bold">Skills</h1>
           {select == 0 ? (
             <span
-              className="bg-green-600 px-2 py-1 rounded-lg cursor-pointer font-semibold"
+              className="dark:bg-green-600 bg-green-500 text-white px-2 py-1 rounded-lg cursor-pointer font-semibold"
               onClick={() => toggle()}
             >
               Primary
             </span>
           ) : (
             <span
-              className="bg-violet-700 px-2 py-1 rounded-lg cursor-pointer font-semibold"
+              className="bg-violet-700 text-white px-2 py-1 rounded-lg cursor-pointer font-semibold"
               onClick={() => toggle()}
             >
               Secondary

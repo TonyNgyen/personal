@@ -52,6 +52,22 @@ const config = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        dottedBG: {
+          DEFAULT: "hsl(var(--dottedBG))",
+          foreground: "hsl(var(--card-foreground))",
+        },
+        regularBG: {
+          DEFAULT: "hsl(var(--regularBG))",
+          foreground: "hsl(var(--card-foreground))",
+        },
+        switchUnchecked: {
+          DEFAULT: "hsl(var(--switchUnchecked))",
+          foreground: "hsl(var(--switchUnchecked))",
+        },
+        switchChecked: {
+          DEFAULT: "hsl(var(--switchChecked))",
+          foreground: "hsl(var(--switchChecked))",
+        }
       },
       borderRadius: {
         lg: "var(--radius)",

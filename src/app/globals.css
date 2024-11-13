@@ -29,12 +29,16 @@
     --chart-3: 197 37% 24%;
     --chart-4: 43 74% 66%;
     --chart-5: 27 87% 67%;
+    --dottedBG: 200, 0%, 99%;
+    --regularBG: 200, 0%, 97%;
+    --switchUnchecked: 0, 5%, 96%;
+    --switchChecked: 142, 71%, 45%;
   }
 
   .dark {
     --background: 240 10% 3.9%;
     --foreground: 0 0% 98%;
-    --card: 240 10% 3.9%;
+    --card: 240, 4%, 16%;
     --card-foreground: 0 0% 98%;
     --popover: 240 10% 3.9%;
     --popover-foreground: 0 0% 98%;
@@ -56,6 +60,10 @@
     --chart-3: 30 80% 55%;
     --chart-4: 280 65% 60%;
     --chart-5: 340 75% 55%;
+    --dottedBG: 240, 6%, 10%;
+    --regularBG: 240, 6%, 10%;
+    --switchUnchecked: 0, 5%, 96%;
+    --switchChecked: 142, 71%, 45%;
   }
 }
 

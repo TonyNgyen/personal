@@ -24,7 +24,7 @@ interface Skill {
 
 function ProjectCard({ data, skills }: { data: Information; skills: { [key: string]: Skill } }) {
   return (
-    <div className="bg-zinc-800 rounded-lg border-stone-400 border flex flex-col overflow-hidden">
+    <div className="bg-card rounded-lg border-stone-400 border flex flex-col overflow-hidden">
       <div className="w-full bg-gray-400">
         <img src={data.image}></img>
       </div>
@@ -34,7 +34,7 @@ function ProjectCard({ data, skills }: { data: Information; skills: { [key: stri
           <h2 className="w-[200px] text-sm">{data.description}</h2>
         </div>
         <div className="flex justify-between">
-          <a target="_blank" href={data.link} className="px-3 rounded-md border-white bg-green-600 font-semibold">See Live</a>
+          <a target="_blank" href={data.link} className="px-3 rounded-md border-white bg-green-600 text-white font-semibold">See Live</a>
           {/* <h1 className="px-3 rounded-md border-zinc-300 border bg-zinc-600 font-semibold">
             Learn More
           </h1> */}

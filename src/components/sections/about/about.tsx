@@ -9,12 +9,12 @@ import CurrentlyLearning from "./aboutMe/currentlyLearning";
 
 function About() {
   return (
-    <div className="bg-black border-y-zinc-300 border bg-opacity-15">
+    <div className="bg-regularBG border-y-zinc-300 border dark:bg-opacity-15">
       <div
         className="w-8/12 mx-auto p-10 flex flex-col gap-3 "
         id="about"
       >
-        <h1 className="mx-auto text-3xl font-bold text-zinc-50 mb-10">
+        <h1 className="mx-auto text-3xl font-bold text-foreground mb-10">
           Career
         </h1>
         <div className="flex-1 flex gap-3">
