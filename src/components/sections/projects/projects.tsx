@@ -349,21 +349,23 @@ function Projects() {
       className="bg-dottedBG dark:bg-[radial-gradient(#48484a_1px,transparent_1px)] bg-[radial-gradient(#d3d3d4_1px,transparent_1px)] [background-size:40px_40px]"
       id="projects"
     >
-      <div className="w-9/12 mx-auto p-10 flex flex-col gap-3">
+      <div className="md:w-9/12 mx-auto p-10 flex flex-col gap-3">
         <h1 className="mx-auto text-3xl font-bold text-foreground mb-10">
           Projects
         </h1>
         <div className="">
-          <div className="flex gap-4 justify-center items-center">
+          <div className="flex gap-4 justify-center items-center md:flex-row flex-col">
             {projects.map((project, index) => (
               <div
-                className={`bg-zinc-900 rounded-lg shadow-lg transition-all z-0 w-3/12`}
+                className={`bg-zinc-900 rounded-lg shadow-lg transition-all z-0 md:w-3/12 w-full`}
                 key={index}
               >
                 <div
                   key={project.name}
                   className={`duration-300 rounded-lg shadow-lg transition-all z-0 ${
-                    isHovered == index ? " opacity-100 " : " dark:opacity-65 opacity-80 "
+                    isHovered == index
+                      ? " opacity-100 "
+                      : " dark:opacity-65 opacity-80 "
                   }`}
                   onMouseEnter={() => setIsHovered(index)}
                   style={{

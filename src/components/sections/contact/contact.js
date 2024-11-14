@@ -38,16 +38,16 @@ function Contact() {
   };
   return (
     <div
-      className="bg-regularBG border-t-zinc-300 border dark:bg-opacity-15 flex flex-col justify-center items-center mx-auto p-10 gap-3 "
+      className="bg-regularBG border-t-zinc-300 border dark:bg-opacity-15 flex flex-col justify-center items-center mx-auto p-10 gap-3"
       id="contact"
     >
       <h1 className="mx-auto text-3xl font-bold text-foreground mb-10">
         Contact
       </h1>
-      <div className="bg-card p-5 py-8 w-[35%] rounded-lg border-stone-400 border">
+      <div className="bg-card p-5 py-8 md:w-[35%] rounded-lg border-stone-400 border w-[80vw]">
         <article className="font-montserrat">
           <form
-            className="lg:w-11/12 mx-auto rounded-lg w-10/12"
+            className="lg:w-11/12 mx-auto rounded-lg md:w-10/12"
             ref={form}
             onSubmit={sendEmail}
           >

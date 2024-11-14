@@ -116,8 +116,8 @@ const skills: { [key: string]: Skill } = {
 
 function Hero() {
   return (
-    <div className="min-h-[calc(100vh-90px)] pb-10 flex flex-col items-center gap-10 pt-[5rem] bg-dottedBG dark:bg-zinc-900 dark:bg-[radial-gradient(#48484a_1px,transparent_1px)] bg-[radial-gradient(#d3d3d4_1px,transparent_1px)] [background-size:40px_40px]">
-      <div className="flex items-center gap-8">
+    <div className="md:min-h-[calc(100vh-90px)] pb-10 flex flex-col items-center gap-10 pt-[5rem] bg-dottedBG dark:bg-zinc-900 dark:bg-[radial-gradient(#48484a_1px,transparent_1px)] bg-[radial-gradient(#d3d3d4_1px,transparent_1px)] [background-size:40px_40px]">
+      <div className="flex items-center gap-8 md:flex-row flex-col">
         <div className="flex items-center">
           <Image
             src="/profile.jpg"
@@ -128,12 +128,12 @@ function Hero() {
           />
         </div>
         <div>
-          <div className="flex justify-center items-start flex-col gap-4">
-            <div className="text-lg">
+          <div className="flex justify-center items-start flex-col p-4">
+            <div className="text-lg flex flex-col gap-4 md:gap-0 md:pl-0 pl-10">
               <h1 className="font-bold text-2xl">
                 I&apos;m Tony, a Full Stack Developer based in the U.S.
               </h1>
-              <h1 className="w-[500px]">
+              <h1 className="md:w-[500px]">
                 {/* I transform ideas into seamless, functional web applications.
                 With expertise in both front-end and back-end development, I
                 turn complex concepts into elegant, effective solutions. */}
@@ -159,12 +159,10 @@ function Hero() {
           Contact
         </Link>
       </div>
-      <div className="">
-        <div className="flex gap-4">
-          {cardInformation.map((project) => (
-            <HeroCard data={project} key={project.name} skills={skills} />
-          ))}
-        </div>
+      <div className="flex gap-4 overflow-scroll self-start w-[100vw] px-5">
+        {cardInformation.map((project) => (
+          <HeroCard data={project} key={project.name} skills={skills} />
+        ))}
       </div>
     </div>
   );

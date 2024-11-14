@@ -22,7 +22,13 @@ interface Skill {
   svg: string;
 }
 
-function ProjectCard({ data, skills }: { data: Information; skills: { [key: string]: Skill } }) {
+function ProjectCard({
+  data,
+  skills,
+}: {
+  data: Information;
+  skills: { [key: string]: Skill };
+}) {
   return (
     <div className="bg-card rounded-lg border-stone-400 border flex flex-col overflow-hidden">
       <div className="w-full bg-gray-400">
@@ -34,7 +40,13 @@ function ProjectCard({ data, skills }: { data: Information; skills: { [key: stri
           <h2 className="w-[200px] text-sm">{data.description}</h2>
         </div>
         <div className="flex justify-between">
-          <a target="_blank" href={data.link} className="px-3 rounded-md border-white bg-green-600 text-white font-semibold">See Live</a>
+          <a
+            target="_blank"
+            href={data.link}
+            className="px-3 rounded-md border-white bg-green-600 text-white font-semibold"
+          >
+            See Live
+          </a>
           {/* <h1 className="px-3 rounded-md border-zinc-300 border bg-zinc-600 font-semibold">
             Learn More
           </h1> */}
@@ -43,7 +55,10 @@ function ProjectCard({ data, skills }: { data: Information; skills: { [key: stri
           className={`border-t-white border border-transparent pt-3 ${styles.bigWrapper}`}
         >
           <div className={`${styles.wrapper}`}>
-            <div className={styles.chips} style={{'--speed': `25000ms`} as React.CSSProperties}>
+            <div
+              className={styles.chips}
+              style={{ "--speed": `25000ms` } as React.CSSProperties}
+            >
               {data.technologies.map((technology) => (
                 <Chip
                   content={skills[technology as keyof Object].name}
@@ -52,7 +67,10 @@ function ProjectCard({ data, skills }: { data: Information; skills: { [key: stri
                 />
               ))}
             </div>
-            <div className={styles.chips} style={{'--speed': `25000ms`} as React.CSSProperties}>
+            <div
+              className={styles.chips}
+              style={{ "--speed": `25000ms` } as React.CSSProperties}
+            >
               {data.technologies.map((technology) => (
                 <Chip
                   content={skills[technology as keyof Object].name}

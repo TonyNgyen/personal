@@ -11,17 +11,17 @@ function About() {
   return (
     <div className="bg-regularBG border-y-zinc-300 border dark:bg-opacity-15">
       <div
-        className="w-8/12 mx-auto p-10 flex flex-col gap-3 "
+        className="md:w-8/12 mx-auto md:p-10 flex flex-col gap-3 p-3"
         id="about"
       >
-        <h1 className="mx-auto text-3xl font-bold text-foreground mb-10">
+        <h1 className="mx-auto text-3xl font-bold text-foreground mb-10 md:mt-0 mt-10">
           Career
         </h1>
-        <div className="flex-1 flex gap-3">
+        <div className="flex-1 flex gap-3 md:flex-row flex-col">
           <AboutMe />
           <WorkHistory />
         </div>
-        <div className="flex-1 flex gap-3">
+        <div className="flex-1 flex gap-3 md:flex-row flex-col">
           <Skills />
           <div className="flex-1 flex flex-col gap-3">
             <CurrentlyBuilding />
