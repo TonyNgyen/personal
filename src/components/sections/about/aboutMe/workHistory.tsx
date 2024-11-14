@@ -2,7 +2,7 @@ import React from "react";
 
 function WorkHistory() {
   return (
-    <div className="flex-1 bg-card border-stone-400 border rounded-lg p-5 flex flex-col">
+    <div className="flex-1 bg-dottedBG border-stone-400 border rounded-lg p-5 flex flex-col">
       <h1 className="text-2xl font-bold">Work History</h1>
       <h2 className="text-xl font-semibold">Choir Power</h2>
       <h3 className="text-sm dark:text-zinc-400 text-zinc-500">Software Engineering Intern</h3>

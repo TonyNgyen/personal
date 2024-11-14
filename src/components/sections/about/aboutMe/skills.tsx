@@ -80,7 +80,7 @@ function Skills() {
   ];
   return (
     <div className="flex-1 flex flex-shrink-0">
-      <div className="flex-1 bg-card border-stone-400 border rounded-lg p-5 pb-7 flex-col">
+      <div className="flex-1 bg-dottedBG border-stone-400 border rounded-lg p-5 pb-7 flex-col">
         <div className="text-2xl mb-7">
           <h1 className="mb-2 font-bold">Skills</h1>
           {select == 0 ? (

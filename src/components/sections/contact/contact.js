@@ -44,7 +44,7 @@ function Contact() {
       <h1 className="mx-auto text-3xl font-bold text-foreground mb-10">
         Contact
       </h1>
-      <div className="bg-card p-5 py-8 md:w-[35%] rounded-lg border-stone-400 border w-[80vw]">
+      <div className="shadow-md bg-dottedBG p-5 py-8 md:w-[35%] rounded-lg border-stone-400 border w-[80vw]">
         <article className="font-montserrat">
           <form
             className="lg:w-11/12 mx-auto rounded-lg md:w-10/12"
@@ -55,7 +55,7 @@ function Contact() {
             <input
               type="text"
               name="user_name"
-              className="block mb-8 dark:bg-zinc-700 bg-regularBG w-full p-4 rounded-md drop-shadow-sm text-foreground"
+              className="block mb-8 dark:bg-zinc-700 bg-background w-full p-4 rounded-md drop-shadow-sm text-foreground"
               placeholder="Enter Your Name"
               value={formValues.name}
               onChange={(e) =>
@@ -66,7 +66,7 @@ function Contact() {
             <input
               type="email"
               name="user_email"
-              className="block mb-8 dark:bg-zinc-700 bg-regularBG w-full p-4 rounded-md drop-shadow-sm text-foreground"
+              className="block mb-8 dark:bg-zinc-700 bg-background w-full p-4 rounded-md drop-shadow-sm text-foreground"
               placeholder="Enter Your Email"
               value={formValues.email}
               onChange={(e) =>
@@ -78,7 +78,7 @@ function Contact() {
               name="message"
               placeholder="Enter Your Message"
               rows={8}
-              className="block dark:bg-zinc-700 bg-regularBG mb-8 w-full resize-none rounded-md drop-shadow-sm p-4 text-foreground h-40"
+              className="block dark:bg-zinc-700 bg-background mb-8 w-full resize-none rounded-md drop-shadow-sm p-4 text-foreground h-40"
               value={formValues.message}
               onChange={(e) =>
                 setFormValues({ ...formValues, message: e.target.value })

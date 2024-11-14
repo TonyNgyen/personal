@@ -8,7 +8,7 @@ function CurrentlyBuilding() {
   };
 
   return (
-    <div className="flex-1 rounded-lg bg-card border-stone-400 border p-5 flex-col flex">
+    <div className="flex-1 rounded-lg bg-dottedBG border-stone-400 border p-5 flex-col flex">
       <h1 className="text-2xl font-bold mb-4">Currently Building</h1>
       <div className="h-full rounded-lg flex items-center gap-10 justify-center">
         <img src={project.image} className="md:h-40 h-32 rounded-lg" />

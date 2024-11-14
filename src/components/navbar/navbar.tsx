@@ -22,7 +22,7 @@ function Navbar() {
       variants={{ visible: { y: 0 }, hidden: { y: "-100%" } }}
       animate={hidden ? "hidden" : "visible"}
       transition={{ duration: 0.35, ease: "easeInOut" }}
-      className="sticky top-0 border-b dark:border-b-white border-b-zinc-900 flex md:p-3 h-[90px] justify-around items-center bg-gray-100 dark:bg-zinc-950 z-10"
+      className="sticky top-0 border-b dark:border-b-white shadow-md flex md:p-3 h-[90px] justify-around items-center bg-gray-100 dark:bg-zinc-950 z-10"
     >
       <h1 className="md:text-2xl text-xl font-bold">Tony Nguyen</h1>
       <div className="flex justify-center items-center md:gap-10 gap-3">

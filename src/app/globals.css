@@ -6,7 +6,7 @@
   :root {
     --background: 0 0% 100%;
     --foreground: 240 10% 3.9%;
-    --card: 0 0% 100%;
+    --card: 0 0% 95%;
     --card-foreground: 240 10% 3.9%;
     --popover: 0 0% 100%;
     --popover-foreground: 240 10% 3.9%;
@@ -29,8 +29,8 @@
     --chart-3: 197 37% 24%;
     --chart-4: 43 74% 66%;
     --chart-5: 27 87% 67%;
-    --dottedBG: 200, 0%, 99%;
-    --regularBG: 200, 0%, 97%;
+    --dottedBG: 200, 10%, 96%;
+    --regularBG: 200, 0%, 95%;
     --switchUnchecked: 0, 5%, 96%;
     --switchChecked: 142, 71%, 45%;
   }

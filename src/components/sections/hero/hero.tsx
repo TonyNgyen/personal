@@ -159,7 +159,7 @@ function Hero() {
           Contact
         </Link>
       </div>
-      <div className="flex gap-4 overflow-scroll self-start w-[100vw] px-5">
+      <div className="pb-[20px] flex gap-4 overflow-scroll w-[100vw] px-5 md:self-center md:w-full md:overflow-auto md:justify-center">
         {cardInformation.map((project) => (
           <HeroCard data={project} key={project.name} skills={skills} />
         ))}
