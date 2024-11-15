@@ -33,7 +33,7 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts"
-, "src/components/sections/contact/contact.js", "src/app/admin/page.jsx"  ],
+, "src/components/sections/contact/contact.js", "src/app/admin/page.jsx", "src/app/page.jsx", "src/app/firebase.js"  ],
   "exclude": [
     "node_modules"
   ]

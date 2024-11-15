@@ -86,7 +86,7 @@ function AdminPage() {
     }
   };
 
-  if (!user) {
+  if (user == null) {
     return (
       <div>
         <form ref={form}>

@@ -9,16 +9,15 @@ import Navbar from "@/components/navbar/navbar";
 import Projects from "@/components/sections/projects/projects";
 import { motion, useScroll, useMotionValueEvent } from "framer-motion";
 import { auth } from "@/app/firebase";
-import { onAuthStateChanged } from "firebase/auth";
+import { Auth, onAuthStateChanged } from "firebase/auth";
 
 export default function Home() {
   const [user, setUser] = useState<object | null>(null); // State to hold the authenticated user
 
   // Set up auth state listener
   useEffect(() => {
-    const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
+    const unsubscribe = onAuthStateChanged(auth as Auth, (currentUser) => {
       setUser(currentUser); // Update the user state when auth state changes
-      console.log("User:", currentUser); // Log the user data (or null if not signed in)
     });
 
     // Clean up the listener on component unmount
