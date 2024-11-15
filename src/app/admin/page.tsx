@@ -18,9 +18,11 @@ function AdminPage() {
     email: "",
     password: "",
   });
+  const [tag, setTag] = useState("");
 
   const [blogValues, setBlogValues] = useState({
     title: "",
+    tags: [] as string[],
     imgSrc: "",
     shortDesc: "",
     longDesc: "",
@@ -69,18 +71,34 @@ function AdminPage() {
     });
   };
 
+  const addTag = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === "Enter" && tag.trim() !== "") {
+      console.log("Enter pressed in tag input field");
+      e.preventDefault(); // Prevent form submission
+      setBlogValues({ ...blogValues, tags: [...blogValues.tags, tag.trim()] });
+      setTag(""); // Clear the input field
+    }
+  };
+
   const addBlog = async () => {
     try {
       const date = format(new Date(), "P");
       const docRef = await addDoc(collection(db, "blogs"), {
         title: blogValues.title,
+        tags: blogValues.tags,
         date: date,
         imgSrc: blogValues.imgSrc,
         shortDesc: blogValues.shortDesc,
         longDesc: blogValues.longDesc,
       });
       console.log("Successfully added blog");
-      setBlogValues({ title: "", imgSrc: "", shortDesc: "", longDesc: "" });
+      setBlogValues({
+        title: "",
+        tags: [],
+        imgSrc: "",
+        shortDesc: "",
+        longDesc: "",
+      });
     } catch (e) {
       console.error("Error adding blog: ", e);
     }
@@ -138,6 +156,23 @@ function AdminPage() {
           }
           className="p-3"
         />
+        <div className="flex">
+          <input
+            type="text"
+            name="tag"
+            placeholder="Add tag"
+            value={tag}
+            onChange={(e) => setTag(e.target.value)}
+            onKeyDown={addTag}
+            className="p-3 w-full"
+          />
+        </div>
+        <div className="flex gap-3 flex-wrap">
+          {blogValues.tags.map((tag) => (
+            <h1 className="bg-emerald-700 py-1 px-3 rounded-full">{tag}</h1>
+          ))}
+        </div>
+
         <input
           type="text"
           name="imgSrc"
