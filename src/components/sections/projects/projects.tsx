@@ -346,7 +346,7 @@ function Projects() {
   // );
   return (
     <div
-      className="bg-dottedBG dark:bg-[radial-gradient(#48484a_1px,transparent_1px)] bg-[radial-gradient(#d3d3d4_1px,transparent_1px)] [background-size:40px_40px]"
+      className="bg-dottedBG dark:bg-[radial-gradient(#48484a_1px,transparent_1px)] bg-[radial-gradient(#b3b3b4_1px,transparent_1px)] [background-size:40px_40px]"
       id="projects"
     >
       <div className="md:w-9/12 mx-auto p-10 flex flex-col gap-3">

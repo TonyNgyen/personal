@@ -36,28 +36,12 @@ function Blog() {
       img: "",
       date: "01/01/2024",
     },
-    {
-      title: "Title",
-      description: "Version 1.0",
-      mainTag: "GymTracker",
-      tags: ["Development", "Troubles"],
-      img: "",
-      date: "01/01/2024",
-    },
-    {
-      title: "Title",
-      description: "Future Plans",
-      mainTag: "K-Calendar",
-      tags: ["Development", "Future"],
-      img: "",
-      date: "01/01/2024",
-    },
   ];
   return (
     <div className="bg-black border-y-zinc-300 border bg-opacity-15" id="blog">
-      <div className="w-8/12 mx-auto p-10 flex flex-col gap-3">
+      <div className="md:w-9/12 mx-auto py-10 md:p-10 flex flex-col gap-3 w-[100vw]">
         <h1 className="mx-auto text-3xl font-bold text-zinc-50 mb-10">Blog</h1>
-        <div className="flex flex-wrap gap-4 justify-center">
+        <div className="flex md:flex-wrap gap-4 justify-center md:flex-row flex-col items-center">
           {blogs.map((blog) => (
             <BlogCard blog={blog} key={blog.title} />
           ))}

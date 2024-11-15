@@ -116,7 +116,7 @@ const skills: { [key: string]: Skill } = {
 
 function Hero() {
   return (
-    <div className="md:min-h-[calc(100vh-90px)] pb-10 flex flex-col items-center gap-10 pt-[5rem] bg-dottedBG dark:bg-zinc-900 dark:bg-[radial-gradient(#48484a_1px,transparent_1px)] bg-[radial-gradient(#d3d3d4_1px,transparent_1px)] [background-size:40px_40px]">
+    <div className="md:min-h-[calc(100vh-90px)] pb-10 flex flex-col items-center gap-10 pt-[5rem] bg-dottedBG dark:bg-zinc-900 dark:bg-[radial-gradient(#48484a_1px,transparent_1px)] bg-[radial-gradient(#b3b3b4_1px,transparent_1px)] [background-size:40px_40px]">
       <div className="flex items-center gap-8 md:flex-row flex-col">
         <div className="flex items-center">
           <Image
