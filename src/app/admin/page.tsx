@@ -9,10 +9,11 @@ import {
 import { auth, db } from "@/app/firebase";
 import { collection, addDoc, getDocs } from "firebase/firestore";
 import { format } from "date-fns";
+import Blog from "@/components/sections/blog/blog";
 
 function AdminPage() {
-  const form = useRef();
-  const [user, setUser] = useState(null);
+  const form = useRef<HTMLFormElement | null>(null);
+  const [user, setUser] = useState<object | null>(null);
   const [formValues, setFormValues] = useState({
     email: "",
     password: "",
@@ -33,7 +34,7 @@ function AdminPage() {
     return () => unsubscribe();
   }, []);
 
-  const signIn = (email, password) =>
+  const signIn = (email: string, password: string) =>
     signInWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
         // Signed in
@@ -169,19 +170,14 @@ function AdminPage() {
         />
         <button
           type="button"
-          onClick={() =>
-            addBlog(
-              blogValues.title,
-              blogValues.imgSrc,
-              blogValues.shortDesc,
-              blogValues.longDesc
-            )
-          }
+          onClick={() => addBlog()}
           className="bg-green-500 px-2 py-1"
         >
           Add
         </button>
       </form>
+      <h1 className="text-3xl text-center mb-4 mt-10">Preview</h1>
+      <Blog />
     </div>
   );
 }
