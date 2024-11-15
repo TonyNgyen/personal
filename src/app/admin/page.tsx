@@ -22,7 +22,8 @@ function AdminPage() {
 
   const [blogValues, setBlogValues] = useState({
     title: "",
-    tags: [] as string[],
+    projectTag: "",
+    tags: new Set<string>(),
     imgSrc: "",
     shortDesc: "",
     longDesc: "",
@@ -67,15 +68,17 @@ function AdminPage() {
   const testReading = async () => {
     const querySnapshot = await getDocs(collection(db, "blogs"));
     querySnapshot.forEach((doc) => {
-      console.log(`${doc.id} => ${doc.data().first}`);
+      console.log(`${doc.id} => ${doc.data()}`);
+      console.log(doc.data());
     });
   };
 
   const addTag = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key === "Enter" && tag.trim() !== "") {
-      console.log("Enter pressed in tag input field");
       e.preventDefault(); // Prevent form submission
-      setBlogValues({ ...blogValues, tags: [...blogValues.tags, tag.trim()] });
+      const newTags = new Set(blogValues.tags);
+      newTags.add(tag.trim());
+      setBlogValues({ ...blogValues, tags: newTags });
       setTag(""); // Clear the input field
     }
   };
@@ -83,18 +86,21 @@ function AdminPage() {
   const addBlog = async () => {
     try {
       const date = format(new Date(), "P");
+      const tagsArray = Array.from(blogValues.tags);
       const docRef = await addDoc(collection(db, "blogs"), {
         title: blogValues.title,
-        tags: blogValues.tags,
+        projectTag: blogValues.projectTag,
+        tags: tagsArray,
         date: date,
         imgSrc: blogValues.imgSrc,
         shortDesc: blogValues.shortDesc,
-        longDesc: blogValues.longDesc,
+        longDesc: JSON.stringify(blogValues.longDesc).slice(1, -1),
       });
       console.log("Successfully added blog");
       setBlogValues({
         title: "",
-        tags: [],
+        projectTag: "",
+        tags: new Set<string>(),
         imgSrc: "",
         shortDesc: "",
         longDesc: "",
@@ -137,15 +143,18 @@ function AdminPage() {
     );
   }
 
+  const tagsArray = Array.from(blogValues.tags);
+
   return (
     <div>
-      <button onClick={() => testAdding()} className="bg-violet-400 p-2">
+      {/* <button onClick={() => testAdding()} className="bg-violet-400 p-2">
         Test Adding
-      </button>
+      </button> */}
       <button onClick={() => testReading()} className="bg-sky-400 p-2">
         Test Reading
       </button>
       <form ref={form} className="flex flex-col gap-4 w-1/4 bg-zinc-600 p-4">
+        <h1 className="text-2xl font-semibold">Add a New Blog</h1>
         <input
           type="text"
           name="title"
@@ -168,8 +177,10 @@ function AdminPage() {
           />
         </div>
         <div className="flex gap-3 flex-wrap">
-          {blogValues.tags.map((tag) => (
-            <h1 className="bg-emerald-700 py-1 px-3 rounded-full">{tag}</h1>
+          {tagsArray.map((tag) => (
+            <h1 className="bg-emerald-700 py-1 px-3 rounded-full" key={tag}>
+              {tag}
+            </h1>
           ))}
         </div>
 
