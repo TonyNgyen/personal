@@ -91,7 +91,7 @@ function Projects() {
   };
   const projects = [
     {
-      name: "GymTracker",
+      name: "Toned",
       description: "A web app that helps people track their workouts",
       longDescription: "A web app that helps people track their workouts",
       image: "/gymtracker.png",
@@ -105,7 +105,7 @@ function Projects() {
         "css",
         "javascript",
       ],
-      link: "https://gymtracker-phi.vercel.app/",
+      link: "https://tonedapp.vercel.app/",
       colors: {
         dark: ["207", "74", "85"],
         light: ["207", "74", "45"],

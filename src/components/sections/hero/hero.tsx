@@ -6,12 +6,12 @@ import Image from "next/image";
 
 let cardInformation = [
   {
-    name: "GymTracker",
+    name: "Toned",
     description: "A web app that helps people track their workouts",
     image: "/gymtracker.png",
     tag: "",
     technologies: ["react", "nextjs", "javascript"],
-    link: "https://gymtracker-phi.vercel.app/",
+    link: "https://tonedapp.vercel.app/",
   },
   {
     name: "KCalendar",

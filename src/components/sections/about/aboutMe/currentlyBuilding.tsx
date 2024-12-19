@@ -3,7 +3,7 @@ import React from "react";
 
 function CurrentlyBuilding() {
   const project = {
-    name: "GymTracker",
+    name: "Toned",
     image: "/gymtracker.png",
   };
 
