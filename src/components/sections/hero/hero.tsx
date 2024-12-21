@@ -10,7 +10,15 @@ let cardInformation = [
     description: "A web app that helps people track their workouts",
     image: "/gymtracker.png",
     tag: "",
-    technologies: ["react", "nextjs", "javascript"],
+    technologies: [
+      "react",
+      "nextjs",
+      "html",
+      "tailwindcss",
+      "mongodb",
+      "css",
+      "javascript",
+    ],
     link: "https://tonedapp.vercel.app/",
   },
   {
@@ -18,7 +26,14 @@ let cardInformation = [
     description: "A web app that helps people track their workouts",
     image: "/kcalendar.png",
     tag: "",
-    technologies: ["react", "nextjs"],
+    technologies: [
+      "react",
+      "nextjs",
+      "html",
+      "tailwindcss",
+      "mongodb",
+      "python",
+    ],
     link: "https://k-calendar-2.vercel.app/",
   },
   {
@@ -26,7 +41,7 @@ let cardInformation = [
     description: "A web app that helps people track their workouts",
     image: "/blog.png",
     tag: "",
-    technologies: ["react", "nextjs"],
+    technologies: ["react", "nextjs", "html", "tailwindcss", "mongodb"],
     link: "https://personal-one-xi.vercel.app/",
   },
 ];
