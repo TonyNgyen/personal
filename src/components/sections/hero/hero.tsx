@@ -153,7 +153,7 @@ function Hero() {
                 With expertise in both front-end and back-end development, I
                 turn complex concepts into elegant, effective solutions. */}
                 I primarily specialize in React, NextJS, JavaScript, and MongoDB
-                and am open to utilizing the many techhnologies I am experienced
+                and am open to utilizing the many technologies I am experienced
                 in and learning new ones!
               </h1>
             </div>
