@@ -28,24 +28,26 @@ function BlogCard({ blog }: { blog: Blog }) {
     <div
       className={`bg-zinc-800 relative border-stone-400 border ${
         expand ? "md:w-[24%]" : "md:w-[24%]"
-      } w-[80vw] flex flex-col p-3 rounded-lg h-96`}
+      } w-[80vw] flex flex-col p-5 rounded-lg h-64`}
     >
-      <div className="bg-blue-400 w-full h-40 overflow-hidden rounded-lg mb-3">
-        <img src={blog.img} />
-      </div>
       <div className="mb-3">
-        <h1 className="text-xl">{blog.title}</h1>
-        <h2 className="text-xs tracking-wider opacity-60 font-light">
+        <h1 className="text-xl font-bold">{blog.title}</h1>
+        <h2 className="text-xs tracking-wider text-zinc-200 font-light">
           {blog.date}
         </h2>
+        <div className="flex gap-[0.25rem] mt-1 text-sm font-normal">
+          {blog.tags.map((tag) => (
+            <div className="border-2 border-white px-2 rounded-full">{tag}</div>
+          ))}
+        </div>
       </div>
 
-      <h3 className="mb-3 h-20 overflow-auto">{blog.shortDesc}</h3>
-      <div className="absolute bottom-5 left-3">
+      <h3 className="mb-3 h-[50%] overflow-auto">{blog.shortDesc}</h3>
+      <div className="">
         <Dialog>
           <DialogTrigger asChild>
             <button
-              className="bg-blue-400 px-3 py-1 rounded-md font-semibold"
+              className="bg-green-600 px-3 py-1 rounded-md font-semibold"
               onClick={() => setExpand(true)}
             >
               Read more

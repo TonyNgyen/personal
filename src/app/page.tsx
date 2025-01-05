@@ -27,7 +27,6 @@ export default function Home() {
     <main className="bg-zinc-900 inset-0">
       {user ? (
         <>
-          <Navbar />
           <Hero />
           <About />
           <Projects />
@@ -36,7 +35,6 @@ export default function Home() {
         </>
       ) : (
         <>
-          <Navbar />
           <Hero />
           <About />
           <Projects />
