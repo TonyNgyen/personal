@@ -26,7 +26,7 @@ function BlogCard({ blog }: { blog: Blog }) {
   const [expand, setExpand] = useState(false);
   return (
     <div
-      className={`bg-zinc-800 relative border-stone-400 border ${
+      className={`bg-zinc-800 relative border-zinc-600 border ${
         expand ? "md:w-[24%]" : "md:w-[24%]"
       } w-[80vw] flex flex-col p-5 rounded-lg h-64`}
     >
@@ -42,8 +42,9 @@ function BlogCard({ blog }: { blog: Blog }) {
         </div>
       </div>
 
-      <h3 className="mb-3 h-[50%] overflow-auto">{blog.shortDesc}</h3>
-      <div className="">
+      {/* <h3 className="mb-3 h-[50%] overflow-auto">{blog.shortDesc}</h3> */}
+      <h3 className="mb-3 overflow-auto">{blog.shortDesc}</h3>
+      {/* <div className="">
         <Dialog>
           <DialogTrigger asChild>
             <button
@@ -78,7 +79,7 @@ function BlogCard({ blog }: { blog: Blog }) {
             </DialogFooter>
           </DialogContent>
         </Dialog>
-      </div>
+      </div> */}
     </div>
   );
 }

@@ -16,7 +16,7 @@ function CurrentlyLearning() {
     },
   ];
   return (
-    <div className="flex-1 rounded-lg bg-dottedBG border-stone-400 border p-5 flex flex-col">
+    <div className="flex-1 rounded-lg bg-dottedBG border-zinc-600 border p-5 flex flex-col">
       <h1 className="text-2xl font-bold">Currently Learning</h1>
       <div className="flex flex-1 gap-4 justify-evenly items-center">
         {skills.map((skill) => (

@@ -30,7 +30,7 @@ function ProjectCard({
   skills: { [key: string]: Skill };
 }) {
   return (
-    <div className="bg-card rounded-lg border-stone-400 border flex flex-col overflow-hidden">
+    <div className="bg-card rounded-lg border-zinc-600 border flex flex-col overflow-hidden">
       <div className="w-full bg-gray-400">
         <img src={data.image}></img>
       </div>

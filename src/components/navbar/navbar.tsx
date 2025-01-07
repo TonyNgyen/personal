@@ -11,27 +11,26 @@ import { onAuthStateChanged } from "firebase/auth";
 function Navbar() {
   const { scrollY } = useScroll();
   const [hidden, setHidden] = useState(false);
-  // const [user, setUser] = useState<object | null>(null); // State to hold the authenticated user
+  const [user, setUser] = useState<object | null>(null); // State to hold the authenticated user
 
-  // // Set up auth state listener
-  // useEffect(() => {
-  //   const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
-  //     setUser(currentUser); // Update the user state when auth state changes
-  //     console.log("User:", currentUser); // Log the user data (or null if not signed in)
-  //   });
+  // Set up auth state listener
+  useEffect(() => {
+    const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
+      setUser(currentUser); // Update the user state when auth state changes
+      console.log("User:", currentUser); // Log the user data (or null if not signed in)
+    });
 
-  //   // Clean up the listener on component unmount
-  //   return () => unsubscribe();
-  // }, []);
-  // useMotionValueEvent(scrollY, "change", (latest) => {
-  //   const previous = scrollY.getPrevious();
-  //   if (previous != undefined && latest > previous && latest > 150) {
-  //     setHidden(true);
-  //   } else {
-  //     setHidden(false);
-  //   }
-  // });
-  const user = auth.currentUser;
+    // Clean up the listener on component unmount
+    return () => unsubscribe();
+  }, []);
+  useMotionValueEvent(scrollY, "change", (latest) => {
+    const previous = scrollY.getPrevious();
+    if (previous != undefined && latest > previous && latest > 150) {
+      setHidden(true);
+    } else {
+      setHidden(false);
+    }
+  });
   return (
     <motion.nav
       variants={{ visible: { y: 0 }, hidden: { y: "-100%" } }}
@@ -44,7 +43,7 @@ function Navbar() {
           user ? " text-green-400 " : " "
         }`}
       >
-        Tony Nguyen
+        <a href="/">Tony Nguyen</a>
       </h1>
       <div className="flex justify-center items-center md:gap-10 gap-3">
         <div className="flex md:gap-10 gap-3">

@@ -44,7 +44,7 @@ function Contact() {
       <h1 className="mx-auto text-3xl font-bold text-foreground mb-10">
         Contact
       </h1>
-      <div className="shadow-md bg-dottedBG p-5 py-8 md:w-[35%] rounded-lg border-stone-400 border w-[80vw]">
+      <div className="shadow-md bg-dottedBG p-5 py-8 md:w-[35%] rounded-lg border-zinc-600 border w-[80vw]">
         <article className="font-montserrat">
           <form
             className="lg:w-11/12 mx-auto rounded-lg md:w-10/12"

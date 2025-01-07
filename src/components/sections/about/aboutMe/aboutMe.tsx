@@ -6,7 +6,7 @@ import { Switch } from "@/components/ui/switch";
 function AboutMe() {
   const [career, setCareer] = useState<boolean>(false);
   return (
-    <div className="flex-1 bg-dottedBG border-stone-400 border rounded-lg p-5">
+    <div className="flex-1 bg-dottedBG border-zinc-600 border rounded-lg p-5">
       <div className="flex flex-col mb-2">
         <h1 className="text-2xl font-bold dark:text-stone-100">About Me</h1>
         <div className="flex items-center space-x-2">

@@ -25,7 +25,7 @@ function HeroCard({
   skills: { [key: string]: Skill };
 }) {
   return (
-    <div className="shadow-md dark:bg-zinc-800 bg-card text-zinc-900 rounded-lg border-stone-400 border px-3 py-5 flex flex-col gap-3">
+    <div className="shadow-md dark:bg-zinc-800 bg-card text-zinc-900 rounded-lg border-zinc-600 border px-3 py-5 flex flex-col gap-3">
       <div className="dark:border-b-stone-100 border-b-zinc-900 border border-transparent pb-2">
         <h1 className="mb-2 text-xl font-bold dark:text-stone-100">
           {data.name}
