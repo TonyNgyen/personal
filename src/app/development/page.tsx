@@ -99,7 +99,7 @@ function BlogPage() {
     <div className="mt-16 px-40">
       <div className="text-center flex flex-col gap-4">
         <h1 className="text-5xl font-bold">Development</h1>
-        <h3 className="text-lg text-zinc-200">What I've been up to. From development progress, future ideas, to frustrations.</h3>
+        <h3 className="text-lg text-zinc-200">What I&apos;ve been up to. From development progress, future ideas, to frustrations.</h3>
       </div>
 
       <div className="flex md:flex-wrap gap-4 justify-center md:flex-row flex-col items-center mt-10">
