@@ -36,8 +36,8 @@ function BlogCard({ blog }: { blog: Blog }) {
           {blog.date}
         </h2>
         <div className="flex gap-[0.25rem] mt-1 text-sm font-normal">
-          {blog.tags.map((tag) => (
-            <div className="border-2 border-white px-2 rounded-full">{tag}</div>
+          {blog.tags.map((index, tag) => (
+            <div className="border-2 border-white px-2 rounded-full" key={index}>{tag}</div>
           ))}
         </div>
       </div>
